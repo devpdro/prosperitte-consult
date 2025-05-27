@@ -1,5 +1,3 @@
-import { IMAGE } from 'src/presentation/assets'
-
 const Home = () => {
   return (
     <div>

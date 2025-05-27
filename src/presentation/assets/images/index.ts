@@ -1,4 +1,5 @@
-import LOGO_HOT_INVEST from './LOGO_HOT_INVEST.jpg'
+import LOGO from './LOGO.png'
+
 import CARTAO from './CARTAO.webp'
 import EQUIPE_REUNIDA from './EQUIPE_REUNIDA.webp'
 import CELULAR_CARTAO from './CELULAR_CARTAO.webp'
@@ -12,7 +13,7 @@ import VISAO from './VISAO.jpg'
 import MISSAO from './MISSAO.jpg'
 
 const IMAGE = {
-  LOGO_HOT_INVEST,
+  LOGO,
   CARTAO,
   EQUIPE_REUNIDA,
   CELULAR_CARTAO,
