@@ -6,7 +6,6 @@ import { useState } from 'react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 import { NavbarItemProps } from 'src/data/models'
-import { IconChevronDown } from '@tabler/icons-react';
 
 import S from './nav-item.module.scss'
 
@@ -31,7 +30,6 @@ const NavItem = ({ label, link, children, closeMenu }: NavbarItemProps) => {
       <Link onClick={handleClick} href={link ?? '#'} className={S['item-link']}>
         <p className={S['item-label']}>
           <span>{label}</span>
-          {children && <IconChevronDown className={`${S['arrow-icon']} ${isOpen && S['rotate-180']}`} />}
         </p>
       </Link>
       {isOpen && children && (

@@ -1,5 +1,4 @@
 import {
-  IconBrandLinkedin,
   IconBrandInstagram,
   IconBrandYoutube,
   IconBrandFacebook,
@@ -13,10 +12,6 @@ type IconProps = {
 }
 
 export const ICONS: IconProps[] = [
-  {
-    icon: IconBrandLinkedin,
-    link: 'https://www.linkedin.com/company/am%C3%A9rica-financeira/mycompany/',
-  },
   {
     icon: IconBrandInstagram,
     link: 'https://www.instagram.com/america.financeira/',

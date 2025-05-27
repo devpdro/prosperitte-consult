@@ -12,6 +12,8 @@
   border-radius: $radii-default;
   background-color: $color-primary;
   color: $color-snow;
+  font-size: 1rem;
+  font-weight: 500
 }
 
 .btn2 {
@@ -40,6 +42,7 @@
   @include hover;
   color: $color-primary;
   border: 0.0625rem solid $color-primary;
+
   &:hover {
     background-color: $color-primary;
     color: $color-snow;
@@ -53,6 +56,7 @@
   color: $color-darkHigh;
   border-radius: $radii-small;
   margin-top: 0.6rem;
+
   &:hover {
     background-color: #3c91e6;
     color: $color-snow;

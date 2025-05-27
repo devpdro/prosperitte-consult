@@ -35,19 +35,18 @@
     .right-section {
       @include display-flex;
       @include hover;
-      font-family: "Geist", sans-serif;
       font-size: 1rem;
       margin-top: 0.8rem;
       border-radius: 3px;
-      padding: 0.8rem 1.4rem;
+      padding: 0.8rem 1.6rem;
+      font-weight: 400;
       background-color: $color-primary;
-      font-weight: 500;
       color: $color-snow;
       .link {
         color: inherit;
       }
       &:hover {
-        background-color: $color-primaryHover;
+        background-color: $color-primaryFade;
       }
       @media (min-width: 1024px) {
         display: flex;

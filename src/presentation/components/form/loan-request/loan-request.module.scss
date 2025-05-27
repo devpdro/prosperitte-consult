@@ -7,7 +7,7 @@
   .title {
     color: $color-darkHigh;
     font-size: $font-medium;
-    font-weight: $weight-bold;
+    font-weight: 500;
     line-height: 2.2rem;
     @media (max-width: 994px) {
       font-size: $font-default;
@@ -65,5 +65,8 @@
     &:focus {
       border-color: $color-error;
     }
+  }
+  .margin-btn {
+    margin-bottom: 1.5rem;
   }
 }

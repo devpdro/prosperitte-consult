@@ -66,7 +66,59 @@ const LoanRequest = () => {
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={S.form}>
         <fieldset>
-          <legend className={S.title}>O dinheiro que você precisa, com as menores taxas.</legend>
+          <legend className={S.title}>Simule o seu consórcio.
+            O momento é agora!
+          </legend>
+
+
+          <select
+            className={`${S['input-text']} ${errors.tipoSolicitacao ? S['input-text-error'] : ''}`}
+            {...register('tipoSolicitacao', {
+              required: 'Tipo de solicitação é obrigatório',
+            })}
+          >
+            <option value="" disabled hidden>
+              Que tipo de produto você busca?
+            </option>
+            <option className={S['option']} value="Imóvel Novo">
+              Imóvel Novo
+            </option>
+            <option className={S['option']} value="Imóvel Usado">
+              Imóvel Usado
+            </option>
+            <option className={S['option']} value="Imóvel Rural">
+              Imóvel Rural
+            </option>
+            <option className={S['option']} value="Terreno">
+              Terreno
+            </option>
+            <option className={S['option']} value="Terreno e Construção">
+              Terreno e Construção
+            </option>
+            <option className={S['option']} value="Reforma">
+              Reforma
+            </option>
+            <option className={S['option']} value="Quitação de Financiamento">
+              Quitação de Financiamento
+            </option>
+            <option className={S['option']} value="Investimento">
+              Investimento
+            </option>
+            <option className={S['option']} value="Carro Novo">
+              Carro Novo
+            </option>
+            <option className={S['option']} value="Carro Usado">
+              Carro Usado
+            </option>
+            <option className={S['option']} value="Caminhão">
+              Caminhão
+            </option>
+            <option className={S['option']} value="Moto">
+              Moto
+            </option>
+          </select>
+
+
           <input
             {...register('nome', {
               required: 'Nome é obrigatório',
@@ -103,66 +155,13 @@ const LoanRequest = () => {
             })}
             mask="(99) 99999-9999"
             maskChar=""
-            className={`${S['input-text']} ${errors.whatsapp ? S['input-text-error'] : ''}`}
+            className={`${S['input-text']} ${S['margin-btn']} ${errors.whatsapp ? S['input-text-error'] : ''}`}
             type="tel"
             inputMode="tel"
-            placeholder="Whatsapp"
+            placeholder="Telefone com DDD"
           />
 
-          <InputMask
-            {...register('cpf', {
-              required: 'CPF é obrigatório',
-              pattern: {
-                value: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/,
-                message: 'CPF inválido',
-              },
-            })}
-            mask="999.999.999-99"
-            maskChar=""
-            className={`${S['input-text']} ${errors.cpf ? S['input-text-error'] : ''}`}
-            type="text"
-            placeholder="CPF"
-            inputMode="numeric"
-          />
-
-          <select
-            className={`${S['input-text']} ${errors.tipoSolicitacao ? S['input-text-error'] : ''}`}
-            {...register('tipoSolicitacao', {
-              required: 'Tipo de solicitação é obrigatório',
-            })}
-          >
-            <option value="" disabled hidden>
-              Qual tipo de solicitação?
-            </option>
-            <option className={S['option']} value="Credito Pessoal">
-              Crédito Pessoal
-            </option>
-            <option className={S['option']} value="Credito Consignado">
-              Crédito Consignado
-            </option>
-            <option className={S['option']} value="Antecipação FGTS">
-              Antecipação FGTS
-            </option>
-            <option className={S['option']} value="Cartão de Crédito">
-              Cartão de Crédito
-            </option>
-          </select>
-
-          <div className={S['terms-box']}>
-            <input
-              className={`${S.checkbox} ${errors.termos ? S['checkbox-error'] : ''}`}
-              type="checkbox"
-              {...register('termos', {
-                required: 'Você deve aceitar os termos para continuar',
-              })}
-              name="termos"
-            />
-            <label className={S['label-checkbox']} htmlFor="termos">
-              Aceito receber comunicações da América Financeira
-            </label>
-          </div>
-
-          <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Contratando' : 'Quero contratar'} />
+          <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Simular agora' : 'Simular agora'} />
         </fieldset>
       </form>
 

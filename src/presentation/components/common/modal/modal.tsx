@@ -37,8 +37,8 @@ const Modal = ({ open, close, description, message }: ModalProps) => (
         <h1 className={S.title}>{message}</h1>
         <h3 className={S.subtitle}>Siga a gente</h3>
         <p className={S.paragraph}>
-          Conheça nossa cultura, explore nossos serviços e veja como <br />
-          transformamos finanças em oportunidades todos os dias.
+          Conheça nossa empresa, nossos serviços e acompanhe de perto <br />
+          como tornamos o processo de consórcio mais fácil e seguro.
         </p>
         <div className={S['icons-section']}>
           {ICONS.map(({ icon: Icon, link }, index) => (

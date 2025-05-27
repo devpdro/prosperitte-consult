@@ -20,17 +20,18 @@ const Header = ({ title, subtitle, image, paragraph, showLoanRequest = true }: H
     }}
   >
     <div className={S['box-section']}>
-      <div className={S['text-section']}>
-        <h6 className={S.subtitle}>{title}</h6>
-        <h1 className={S.title}>{subtitle}</h1>
-        {paragraph && <p className={S.paragraph}>{paragraph}</p>}
-      </div>
 
       {showLoanRequest && (
         <div className={S['form-section']}>
           <LoanRequest />
         </div>
       )}
+
+      <div className={S['text-section']}>
+        <h6 className={S.subtitle}>{title}</h6>
+        <h1 className={S.title}>{subtitle}</h1>
+        {paragraph && <p className={S.paragraph}>{paragraph}</p>}
+      </div>
     </div>
   </header>
 )
