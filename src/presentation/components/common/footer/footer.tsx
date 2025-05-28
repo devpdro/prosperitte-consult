@@ -40,6 +40,7 @@ export default function Footer() {
           <h4>Transparência</h4>
           <ul>
             <li><Link href="/politica-de-privacidade">Política de privacidade</Link></li>
+            <li><Link href="/termos-de-uso">Termos de uso</Link></li>
           </ul>
           <h5>Ajuda</h5>
           <ul>
@@ -66,13 +67,16 @@ export default function Footer() {
               <a href="#consorcio" onClick={handleSmoothScroll("consorcio")}>Consórcio</a>
             </li>
             <li>
-              <a href="#como-funciona" onClick={handleSmoothScroll("como-funciona")}>Como funciona</a>
-            </li>
-            <li>
               <a href="#beneficios" onClick={handleSmoothScroll("beneficios")}>Benefícios</a>
             </li>
             <li>
-              <a href="#depoimentos" onClick={handleSmoothScroll("depoimentos")}>Depoimentos</a>
+              <a href="#como-funciona" onClick={handleSmoothScroll("como-funciona")}>Como funciona</a>
+            </li>
+            <li>
+              <a href="#quem-somos" onClick={handleSmoothScroll("quem-somos")}>Quem somos</a>
+            </li>
+            <li>
+              <a href="#perguntas-frequentes" onClick={handleSmoothScroll("perguntas-frequentes")}>Perguntas frequentes</a>
             </li>
           </ul>
         </div>

@@ -1,54 +1,64 @@
-import React from 'react'
-import S from './benefits.module.scss'
+import {
+    IconShieldCheck,
+    IconPigMoney,
+    IconTrendingUp,
+    IconFileCertificate,
+    IconGift,
+    IconUsersGroup
+} from "@tabler/icons-react";
 
-const benefits = [
+import styles from "./benefits.module.scss";
+
+const BENEFITS = [
     {
-        icon: (
-            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect width="40" height="40" rx="20" fill="#F2F6FF" /><path d="M13 27V17a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H15a2 2 0 0 1-2-2Z" stroke="#1A3AFF" strokeWidth="2" /><path d="M17 21h6" stroke="#1A3AFF" strokeWidth="2" strokeLinecap="round" /></svg>
-        ),
-        title: 'Conquista econômica',
-        desc: 'Até 50% mais barato que os outros consórcios.'
+        icon: <IconShieldCheck size={36} stroke={1.7} />,
+        title: "Segurança e Credibilidade",
+        desc: "Empresa autorizada e fiscalizada pelo Banco Central. Seu dinheiro está 100% protegido.",
     },
     {
-        icon: (
-            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect width="40" height="40" rx="20" fill="#F2F6FF" /><path d="M13 27V17a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H15a2 2 0 0 1-2-2Z" stroke="#1A3AFF" strokeWidth="2" /><path d="M20 19v6" stroke="#1A3AFF" strokeWidth="2" strokeLinecap="round" /></svg>
-        ),
-        title: 'Menos burocracia',
-        desc: 'Processo simples e transparente sobre valores e processos de contemplação.'
+        icon: <IconPigMoney size={36} stroke={1.7} />,
+        title: "Sem Juros, Sem Entrada",
+        desc: "Planeje seu futuro sem pagar juros abusivos. Aqui, você investe no que é seu.",
     },
     {
-        icon: (
-            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect width="40" height="40" rx="20" fill="#F2F6FF" /><path d="M20 13v14" stroke="#1A3AFF" strokeWidth="2" strokeLinecap="round" /><circle cx="20" cy="20" r="7" stroke="#1A3AFF" strokeWidth="2" /></svg>
-        ),
-        title: 'Confiança total',
-        desc: '93% dos clientes indicam o consórcio Mycon.'
+        icon: <IconTrendingUp size={36} stroke={1.7} />,
+        title: "Planos Flexíveis",
+        desc: "Diversas opções de créditos, parcelas que cabem no seu bolso e prazos sob medida.",
     },
     {
-        icon: (
-            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect width="40" height="40" rx="20" fill="#F2F6FF" /><path d="M20 13v14M13 20h14" stroke="#1A3AFF" strokeWidth="2" strokeLinecap="round" /></svg>
-        ),
-        title: 'Contempla mais',
-        desc: 'A média de contemplação é de 5,5% contra 2% dos outros consórcios.'
+        icon: <IconFileCertificate size={36} stroke={1.7} />,
+        title: "Atendimento Especializado",
+        desc: "Consultores prontos para te ajudar a escolher o melhor plano, de forma transparente e humanizada.",
     },
-]
+    {
+        icon: <IconGift size={36} stroke={1.7} />,
+        title: "Contemplação Acelerada",
+        desc: "Aumente suas chances com lances livres, lances fixos e sorteios mensais.",
+    },
+    {
+        icon: <IconUsersGroup size={36} stroke={1.7} />,
+        title: "Sem Burocracia",
+        desc: "Faça tudo 100% online, com agilidade na contratação e acompanhamento da sua cota.",
+    },
+];
 
 const Benefits = () => {
     return (
-        <section className={S.benefitsSection}>
-            <h2 className={S.title}>O consórcio ideal para conquistar seu sonho</h2>
-            <p className={S.subtitle}>Você conquista de um jeito leve para o seu bolso e sem pesar na mente.</p>
-            <div className={S.cardsContainer}>
-                {benefits.map((item, idx) => (
-                    <div className={S.card} key={idx}>
-                        <div className={S.icon}>{item.icon}</div>
-                        <div className={S.cardTitle}>{item.title}</div>
-                        <div className={S.cardDesc}>{item.desc}</div>
+        <section id="beneficios" className={styles.section}>
+            <h2 className={styles.title}>
+                Por que fazer consórcio com a <span style={{ color: "#100f30" }}>Prospéritté</span><span style={{ color: "#100f30", fontStyle: "italic" }}> Consult?</span>
+            </h2>
+            <div className={styles.grid}>
+                {BENEFITS.map((b, i) => (
+                    <div className={styles.card} key={i}>
+                        <div className={styles.icon}>{b.icon}</div>
+                        <div className={styles.cardTitle}>{b.title}</div>
+                        <div className={styles.cardDesc}>{b.desc}</div>
                     </div>
                 ))}
             </div>
-            <button className={S.ctaBtn}>Falar com o Time de Especialistas</button>
         </section>
-    )
-}
+    );
+};
 
-export default Benefits
+export default Benefits;

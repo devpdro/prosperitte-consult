@@ -1,10 +1,9 @@
 'use client'
 
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import InputMask from 'react-input-mask'
 
-import { Modal, Button } from 'src/presentation/components'
+import { Button } from 'src/presentation/components'
 
 import S from './loan-request.module.scss'
 
@@ -18,9 +17,6 @@ type LoanRequestProps = {
 }
 
 const LoanRequest = () => {
-  const [modalMessage, setModalMessage] = useState('')
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
   const {
     register,
     handleSubmit,
@@ -35,31 +31,13 @@ const LoanRequest = () => {
     },
   })
 
-  const onSubmit = async (data: LoanRequestProps) => {
-    try {
-      const response = await fetch('/api/loan', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-
-      if (!response.ok) {
-        throw new Error('Não foi possível processar a solicitação. Por favor, tente novamente mais tarde.')
-      }
-
-      setModalMessage('Obrigado! Em breve entraremos em contato.')
-      reset()
-    } catch (error) {
-      setModalMessage('Ops! Por favor, tente novamente mais tarde.')
-    } finally {
-      setIsModalOpen(true)
-    }
-  }
-
-  const closeModal = () => {
-    setIsModalOpen(false)
+  const onSubmit = () => {
+    const phone = '5519993273002';
+    const msg = encodeURIComponent(
+      'Olá! Tenho interesse em simular um consórcio e gostaria de receber mais informações. Pode me ajudar a conquistar meu objetivo?'
+    );
+    window.open(`https://wa.me/${phone}?text=${msg}`);
+    reset();
   }
 
   return (
@@ -164,8 +142,6 @@ const LoanRequest = () => {
           <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Simular agora' : 'Simular agora'} />
         </fieldset>
       </form>
-
-      <Modal open={isModalOpen} close={closeModal} message={modalMessage} />
     </div>
   )
 }

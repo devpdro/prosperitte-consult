@@ -3,43 +3,40 @@
 import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { IconChevronLeft, IconChevronRight, IconSun, IconFileText, IconUsers, IconGift, IconCalendarEvent, IconTrophy } from '@tabler/icons-react';
 
 import styles from './steps.module.scss';
 
-import { IMAGE } from 'src/presentation/assets';
-
-
 const articles = [
     {
-        image: '/img/solar-panels.jpg', // foto de painéis solares
-        title: 'Simulação',
-        description: 'Faça a simulação e escolha o consórcio ideal para você.',
+        icon: <IconSun size={42} color="#100f30" />,
+        title: '1 - Simule Online',
+        description: 'Escolha o valor da sua carta de crédito, o prazo e simule direto pelo nosso site ou aplicativo, de forma rápida e fácil.',
     },
     {
-        image: '/img/ilustracao-contratacao.png', // ilustração
-        title: 'Contratação',
-        description: 'Contrate pelo aplicativo ou vá até uma agência Sicredi e dê o primeiro passo para a realização do seu sonho.',
+        icon: <IconFileText size={42} color="#100f30" />,
+        title: '2 - Contrate 100% Digital',
+        description: 'Após a simulação, você faz a contratação diretamente pela plataforma, sem burocracia, sem papelada e sem precisar sair de casa.',
     },
     {
-        image: '/img/ilustracao-grupo.png', // ilustração
-        title: 'Seu grupo',
-        description: 'Você fará parte de um grupo de pessoas com o mesmo objetivo e terá uma cota para participar dos sorteios.',
+        icon: <IconUsers size={42} color="#100f30" />,
+        title: '3 - Entrada no Grupo',
+        description: 'Ao contratar, você entra automaticamente em um grupo com pessoas que têm o mesmo objetivo: conquistar seu bem de forma planejada.',
     },
     {
-        image: '/img/ilustracao-sorteio.png', // ilustração
-        title: 'Sorteio',
-        description: 'Mensalmente você pode acompanhar as contemplações que ocorrem por sorteio nas assembleias.',
+        icon: <IconGift size={42} color="#100f30" />,
+        title: '4 - Sorteios Mensais',
+        description: 'Todos os meses acontecem sorteios online e seguros, que você pode acompanhar em tempo real pela plataforma.',
     },
     {
-        image: '/img/airplane-takeoff.jpg', // foto de um avião decolando
-        title: 'Assembleias',
-        description: 'As assembleias ocorrem todos os meses. Sua cota participa do sorteio ou você pode dar um lance, e os resultados você confere pelo aplicativo de consórcios.',
+        icon: <IconCalendarEvent size={42} color="#100f30" />,
+        title: '5 - Lances e Assembleias',
+        description: 'Além dos sorteios, você pode oferecer lances para antecipar sua contemplação. Tudo é transparente e pode ser acompanhado pelo app.',
     },
     {
-        image: '/img/harvester-field.jpg', // foto de uma colheitadeira em uma lavoura
-        title: 'Contemplação',
-        description: 'Você tem duas possibilidades: ser contemplado por sorteio, onde todos participam em igualdade de condições, ou dar um lance, onde as maiores ofertas são contempladas.',
+        icon: <IconTrophy size={42} color="#100f30" />,
+        title: '6 - Contemplação',
+        description: 'Seja por sorteio ou lance, ao ser contemplado você recebe sua carta de crédito e pode realizar seu sonho do jeito que quiser.',
     },
 ]
 
@@ -74,10 +71,10 @@ export default function Steps() {
     }, [emblaApi, onSelect]);
 
     return (
-        <section className={styles.section}>
+        <section id='como-funciona' className={styles.section}>
             <div className={styles.contentWrapper}>
                 <div className={styles.headerColumn}>
-                    <h2 className={styles.title}>Ainda tem dúvidas? Conheça as etapas do consórcio</h2>
+                    <h2 className={styles.title}>Como funciona o consórcio? Veja as etapas:</h2>
                     <div className={styles.controls}>
                         <button
                             className={styles.prevBtn}
@@ -103,12 +100,12 @@ export default function Steps() {
                             {articles.map((article, idx) => (
                                 <div className={styles.slide} key={idx}>
                                     <div className={styles.card}>
-                                        <div className={styles.cardImage}>
-                                            <img src={article.image} alt={article.title} />
+                                        <div className={styles.cardIconNum}>
+                                            {article.icon}
                                         </div>
                                         <div className={styles.cardContent}>
-                                            <div className={styles.cardTitle}>{article.description}</div>
-                                            <div className={styles.cardDescription}>{article.title}</div>
+                                            <div className={styles.cardTitle}>{article.title}</div>
+                                            <div className={styles.cardDescription}>{article.description}</div>
                                         </div>
                                     </div>
                                 </div>
