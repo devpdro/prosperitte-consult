@@ -1,8 +1,7 @@
-import { Achievement, About, Benefits, Faq, Footer, Header, Meta, Navbar, Rate, Steps, Warning } from "src/presentation/components"
+import { Achievement, About, Path, Benefits, Faq, Footer, Header, Meta, Navbar, Rate, Steps, Warning } from "src/presentation/components"
 import { ICON, IMAGE } from 'src/presentation/assets'
 
 import S from './home.module.scss'
-import Path from "src/presentation/components/common/path/path"
 
 const Home = () => {
   const IMAGES = IMAGE.CASAL

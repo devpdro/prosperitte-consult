@@ -1,4 +1,3 @@
-import { type ElementType } from 'react'
 import { Modal as ResponsiveModal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 
@@ -7,19 +6,13 @@ import { ICONS } from 'src/data/ui'
 
 import S from './modal.module.scss'
 
-type ItemProps = {
-  link: string
-  icon: ElementType
-}
-
 type ModalProps = {
   open: boolean
   message: string
-  description?: ItemProps[]
   close: () => void
 }
 
-const Modal = ({ open, close, description, message }: ModalProps) => (
+const Modal = ({ open, close, message }: ModalProps) => (
   <div className={S.container}>
     <ResponsiveModal
       classNames={{ modal: S.modal }}

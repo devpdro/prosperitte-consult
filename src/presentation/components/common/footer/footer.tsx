@@ -19,7 +19,6 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.columns}>
 
-
         <div className={styles.column}>
           <h4>Ouvidoria</h4>
           <ul>

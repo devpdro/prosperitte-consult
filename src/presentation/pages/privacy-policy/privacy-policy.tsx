@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
                         <li><b>Titular:</b> Pessoa física a quem os dados pessoais se referem.</li>
                         <li><b>Controladora:</b> Prospéritté Consult, responsável por tomar as decisões sobre o tratamento dos dados.</li>
                         <li><b>Operadora:</b> Empresas parceiras que tratam dados em nosso nome.</li>
-                        <li><b>Encarregado (DPO):</b> Profissional que atua como canal de comunicação entre você e o [Nome do Consórcio] em relação aos seus dados.</li>
+                        <li><b>Encarregado (DPO):</b> Profissional que atua como canal de comunicação entre você e o Prospéritté Consult em relação aos seus dados.</li>
                     </ul>
 
                     <h2>3. QUAIS DADOS COLETAMOS</h2>

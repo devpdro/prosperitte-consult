@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { IconCheck } from '@tabler/icons-react'
 import S from './path.module.scss'
 
@@ -31,9 +31,8 @@ const Path = () => {
             const windowHeight = window.innerHeight;
             const sectionHeight = rect.height;
 
-            // Quando a seção começa a entrar na tela
-            const start = windowHeight - 100; // 100px antes do topo
-            const end = -sectionHeight + 100; // 100px antes do fim
+            const start = windowHeight - 100;
+            const end = -sectionHeight + 100;
 
             let percent = 0;
             if (rect.top < start && rect.bottom > end) {
