@@ -3,7 +3,7 @@
 
 .faqSection {
   background-color: #F5F6FA;
-  padding: 5.5rem 0 5.5rem 0;
+  padding: 1.5rem 0 5.5rem 0;
 }
 
 .contentWrapper {
@@ -118,10 +118,14 @@
 }
 
 @media (max-width: 900px) {
+
+  .contentWrapper {
+    flex-direction: column;
+  }
+
   .faqSection {
     flex-direction: column;
     align-items: stretch;
-
   }
 
   .left {
@@ -132,11 +136,10 @@
   }
 
   .right {
-    margin-left: 0 !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    gap: 16px;
+    margin-left: 0!important;
+    max-width: 100%!important;
+    width: 100%!important;
+    gap: 20px;
   }
 
   .title {
@@ -183,6 +186,12 @@
     margin-top: 12px;
   }
 
+  .right {
+    min-width: 100%;
+    max-width: 100%;
+    gap: 16px;
+  }
+
   .title {
     font-size: 1.6rem;
   }
@@ -214,13 +223,5 @@
   .icon {
     font-size: 1.2rem;
     margin-left: 8px;
-  }
-
-  .right {
-    margin-left: 0 !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    gap: 10px;
   }
 }

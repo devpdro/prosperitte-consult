@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
                     </ul>
                     <p>Para exercer seus direitos, entre em contato:</p>
                     <ul>
-                        <li>Assunto: "Direitos do Titular - Dados"</li>
+                        <li>Assunto: &quot;Direitos do Titular - Dados&quot;</li>
                     </ul>
 
                     <h2>9. ATENDIMENTO</h2>
