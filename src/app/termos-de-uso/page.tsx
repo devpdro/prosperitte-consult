@@ -1,3 +1,3 @@
-import { makeTermsOfUse } from 'src/main/factories/pages'
+import { TermsOfUse } from 'src/presentation/pages'
 
-export default makeTermsOfUse
+export default TermsOfUse

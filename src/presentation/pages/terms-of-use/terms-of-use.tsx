@@ -1,6 +1,6 @@
 import { Footer, Meta, Navbar } from "src/presentation/components"
 
-import styles from '../privacy-policy/privacy-policy.module.scss'
+import styles from './terms-of-use.module.scss'
 
 const TermsOfUse = () => {
     return (
