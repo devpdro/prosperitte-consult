@@ -8,24 +8,28 @@ import styles from "./faq.module.scss";
 
 const QUESTIONS = [
     {
-        question: "É seguro usar um banco digital?",
-        answer: `Sim! Bancos digitais seguem as mesmas normas de segurança dos bancos tradicionais, com proteção de dados, criptografia e fiscalização do Banco Central. Além disso, você pode acompanhar todas as movimentações em tempo real pelo app.`,
+        question: "Consórcio é seguro?",
+        answer: `Sim! O consórcio é regulamentado pelo Banco Central, e as administradoras são fiscalizadas rigorosamente. O dinheiro dos participantes é protegido por regras específicas e transparência total.`,
     },
     {
-        question: "Como funciona o atendimento em um banco digital?",
-        answer: `O atendimento é 100% online, disponível pelo aplicativo, chat, e-mail ou telefone. Você resolve tudo sem precisar ir até uma agência física, com suporte rápido e eficiente.`,
+        question: "Preciso dar entrada para participar do consórcio?",
+        answer: `Não! No consórcio, você não precisa dar entrada. Basta escolher o valor da sua carta de crédito e começar a pagar as parcelas mensais.`,
     },
     {
-        question: "Posso receber meu salário e pagar contas normalmente?",
-        answer: `Sim! Você pode receber salário, transferir, pagar contas, boletos, fazer PIX e até investir, tudo pelo app. O banco digital oferece as mesmas funcionalidades essenciais de um banco tradicional.`,
+        question: "Quando vou receber meu bem?",
+        answer: `Você pode ser contemplado por sorteio ou dando um lance nas assembleias mensais. Todos os participantes têm chances iguais de serem sorteados, e quem oferece o maior lance também pode ser contemplado.`,
     },
     {
-        question: "E se eu precisar sacar dinheiro?",
-        answer: `Você pode sacar dinheiro em caixas eletrônicos da rede Banco24Horas em todo o Brasil, usando seu cartão do banco digital.`,
+        question: "O valor das parcelas pode mudar?",
+        answer: `Sim, as parcelas podem ser ajustadas conforme a variação do preço do bem ou serviço, garantindo que o valor da sua carta de crédito seja sempre suficiente para a compra.`,
     },
     {
-        question: "O que acontece se eu tiver algum problema com o app?",
-        answer: `O suporte está sempre disponível para te ajudar. Além disso, o app é atualizado frequentemente para garantir segurança e estabilidade. Se precisar, você pode bloquear o cartão, redefinir senha e resolver tudo pelo celular.`,
+        question: "E se eu desistir do consórcio?",
+        answer: `Você pode sair do grupo a qualquer momento. O valor pago será devolvido conforme as regras do contrato, geralmente após o encerramento do grupo ou por sorteio de desistentes.`,
+    },
+    {
+        question: "Quais as vantagens do consórcio em relação ao financiamento?",
+        answer: `O consórcio não tem juros, apenas uma taxa de administração, o que torna as parcelas mais acessíveis. Além disso, você pode planejar a compra do seu bem sem comprometer seu orçamento.`,
     },
 ];
 
@@ -34,40 +38,42 @@ export default function FAQ() {
 
     return (
         <section id="perguntas-frequentes" className={styles.faqSection}>
-            <div className={styles.left}>
-                <h2 className={styles.title}>Ficou com alguma dúvida?</h2>
-                <p className={styles.subtitle}>
-                    Encontre respostas para suas principais dúvidas sobre produtos e serviços do banco digital.
-                </p>
-                <button className={styles.button}>Confira perguntas frequentes</button>
-            </div>
-            <div className={styles.right}>
-                {QUESTIONS.map((q, i) => (
-                    <div
-                        className={`${styles.card} ${open === i ? styles.open : ""}`}
-                        key={i}
-                        onClick={() => setOpen(open === i ? null : i)}
-                    >
-                        <div className={styles.cardHeader}>
-                            <span className={styles.question}>{q.question}</span>
-                            {open === i ? (
-                                <FiX className={styles.icon} />
-                            ) : (
-                                <FiPlus className={styles.icon} />
-                            )}
-                        </div>
+            <div className={styles.contentWrapper}>
+                <div className={styles.left}>
+                    <h2 className={styles.title}>Ficou com alguma dúvida?</h2>
+                    <p className={styles.subtitle}>
+                        Tire suas dúvidas e descubra por que o consórcio é uma alternativa segura, flexível e econômica para conquistar seus objetivos.
+                    </p>
+                    <button className={styles.button}>Confira perguntas frequentes</button>
+                </div>
+                <div className={styles.right}>
+                    {QUESTIONS.map((q, i) => (
                         <div
-                            className={styles.answer}
-                            style={{
-                                maxHeight: open === i ? "500px" : "0",
-                                opacity: open === i ? 1 : 0,
-                                paddingTop: open === i ? "20px" : "0",
-                            }}
+                            className={`${styles.card} ${open === i ? styles.open : ""}`}
+                            key={i}
+                            onClick={() => setOpen(open === i ? null : i)}
                         >
-                            {q.answer}
+                            <div className={styles.cardHeader}>
+                                <span className={styles.question}>{q.question}</span>
+                                {open === i ? (
+                                    <FiX className={styles.icon} />
+                                ) : (
+                                    <FiPlus className={styles.icon} />
+                                )}
+                            </div>
+                            <div
+                                className={styles.answer}
+                                style={{
+                                    maxHeight: open === i ? "500px" : "0",
+                                    opacity: open === i ? 1 : 0,
+                                    paddingTop: open === i ? "20px" : "0",
+                                }}
+                            >
+                                {q.answer}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
     );

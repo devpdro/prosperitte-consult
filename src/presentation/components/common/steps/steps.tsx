@@ -9,52 +9,43 @@ import styles from './steps.module.scss';
 
 import { IMAGE } from 'src/presentation/assets';
 
+
 const articles = [
     {
-        image: IMAGE.CASAL.src,
-        title: 'Missão',
-        description: 'Oferecer soluções financeiras inteligentes e acessíveis, empoderando pessoas e transformando vidas.',
+        image: '/img/solar-panels.jpg', // foto de painéis solares
+        title: 'Simulação',
+        description: 'Faça a simulação e escolha o consórcio ideal para você.',
     },
     {
-        image: IMAGE.CASAL.src,
-        title: 'Visão',
-        description: 'Ser o banco digital que mais transforma vidas no Brasil, conectando inovação com propósito.',
+        image: '/img/ilustracao-contratacao.png', // ilustração
+        title: 'Contratação',
+        description: 'Contrate pelo aplicativo ou vá até uma agência Sicredi e dê o primeiro passo para a realização do seu sonho.',
     },
     {
-        image: IMAGE.CASAL.src,
-        title: 'Transformação como destino',
-        description: 'Cada produto, atendimento e tecnologia tem um único foco: melhorar a vida de quem confia em nós.'
+        image: '/img/ilustracao-grupo.png', // ilustração
+        title: 'Seu grupo',
+        description: 'Você fará parte de um grupo de pessoas com o mesmo objetivo e terá uma cota para participar dos sorteios.',
     },
     {
-        image: IMAGE.CASAL.src,
-        title: 'Fé em tudo o que fazemos',
-        description: 'Nossos passos são guiados por princípios cristãos e a certeza de que estamos a serviço de algo maior.'
+        image: '/img/ilustracao-sorteio.png', // ilustração
+        title: 'Sorteio',
+        description: 'Mensalmente você pode acompanhar as contemplações que ocorrem por sorteio nas assembleias.',
     },
     {
-        image: IMAGE.CASAL.src,
-        title: 'Confiança e transparência',
-        description: 'Atuamos com verdade, responsabilidade e integridade em todas as relações.'
+        image: '/img/airplane-takeoff.jpg', // foto de um avião decolando
+        title: 'Assembleias',
+        description: 'As assembleias ocorrem todos os meses. Sua cota participa do sorteio ou você pode dar um lance, e os resultados você confere pelo aplicativo de consórcios.',
     },
     {
-        image: IMAGE.CASAL.src,
-        title: 'Simplicidade com excelência',
-        description: 'O melhor serviço é o que qualquer pessoa entende e consegue usar com facilidade.'
+        image: '/img/harvester-field.jpg', // foto de uma colheitadeira em uma lavoura
+        title: 'Contemplação',
+        description: 'Você tem duas possibilidades: ser contemplado por sorteio, onde todos participam em igualdade de condições, ou dar um lance, onde as maiores ofertas são contempladas.',
     },
-    {
-        image: IMAGE.CASAL.src,
-        title: 'Meritocracia e valorização humana',
-        description: 'Reconhecemos o esforço e celebramos a superação de cada pessoa que cresce com a gente.'
-    },
-    {
-        image: IMAGE.CASAL.src,
-        title: 'Inovação com coração',
-        description: 'Tecnologia, sim. Mas com alma, propósito e foco em quem mais precisa de apoio.'
-    },
-];
+]
 
 export default function Steps() {
     const [emblaRef, emblaApi] = useEmblaCarousel({
-        loop: true,
+        loop: false,
         align: 'start',
         skipSnaps: false,
         slidesToScroll: 1,
@@ -86,7 +77,7 @@ export default function Steps() {
         <section className={styles.section}>
             <div className={styles.contentWrapper}>
                 <div className={styles.headerColumn}>
-                    <h2 className={styles.title}>Missão, visão e valores HotInvest</h2>
+                    <h2 className={styles.title}>Ainda tem dúvidas? Conheça as etapas do consórcio</h2>
                     <div className={styles.controls}>
                         <button
                             className={styles.prevBtn}

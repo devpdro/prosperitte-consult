@@ -2,7 +2,7 @@
 @import '../../../styles/themes/mixins.scss';
 
 .footer {
-  background: $color-secondary;
+  background: $color-primary;
   color: #fff;
   padding: 48px 2rem 24px 2rem;
   font-family: inherit;
@@ -96,9 +96,6 @@
     color: #fff;
     font-size: 1.3rem;
     transition: color 0.2s;
-    &:hover {
-      color: $color-primary;
-    }
   }
 }
 
@@ -188,7 +185,7 @@
   transition: color 0.2s;
   font-size: 1.4rem;
   &:hover {
-    color: $color-primary;
+    color: $color-secondary;
   }
 }
 

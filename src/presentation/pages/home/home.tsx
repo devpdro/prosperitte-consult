@@ -1,4 +1,4 @@
-import { Achievement, About, Benefits, Faq, Footer, Header, Meta, Navbar, Rate, Steps } from "src/presentation/components"
+import { Achievement, About, Benefits, Faq, Footer, Header, Meta, Navbar, Rate, Steps, Warning } from "src/presentation/components"
 import { IMAGE } from 'src/presentation/assets'
 
 const Home = () => {
@@ -13,10 +13,10 @@ const Home = () => {
       <Navbar />
       <Header
         title="Simule seu consórcio agora mesmo!"
-        subtitle={`Realizando sonhos \n com planejamento \n e segurança`}
+        subtitle={`Realizando sonhos \n com planejamento e \n segurança`}
         paragraph="*Aqui seu consórcio é simples, rápido e sem burocracia"
         image={IMAGES.src} />
-
+      <Warning />
       <Achievement />
       <Steps />
       <Benefits />

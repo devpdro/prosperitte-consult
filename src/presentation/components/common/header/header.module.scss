@@ -47,6 +47,7 @@
         font-weight: $weight-default;
         font-size: $font-default;
         margin-bottom: 1.5rem;
+        text-align:  right;
 
         @media (min-width: 625px) and (max-width: 994px) {
           font-size: $font-small;
@@ -62,7 +63,7 @@
         font-size: $font-large;
         font-weight: $weight-bold;
         line-height: 2.9rem;
-        margin-bottom: 2rem;
+        margin-bottom: 2rem;   text-align:  right;
 
         @media (min-width: 625px) and (max-width: 994px) {
           font-size: $font-large;
@@ -79,7 +80,7 @@
       .paragraph {
         font-weight: $weight-light;
         font-size: $font-small;
-        margin-top: 1.5rem;
+        margin-top: 1.5rem;   text-align:  right;
 
         @media (max-width: 994px) {
           font-size: $font-small;
