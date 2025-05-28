@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
                         <li><b>Titular:</b> Pessoa física a quem os dados pessoais se referem.</li>
                         <li><b>Controladora:</b> Prospéritté Consult, responsável por tomar as decisões sobre o tratamento dos dados.</li>
                         <li><b>Operadora:</b> Empresas parceiras que tratam dados em nosso nome.</li>
-                        <li><b>Encarregado (DPO):</b> Profissional que atua como canal de comunicação entre você e o Prospéritté Consult em relação aos seus dados.</li>
+                        <li><b>Encarregado DPO:</b> Profissional que atua como canal de comunicação entre você e o Prospéritté Consult em relação aos seus dados.</li>
                     </ul>
 
                     <h2>3. QUAIS DADOS COLETAMOS</h2>
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
                     <ul>
                         <li>Endereço IP</li>
                         <li>Geolocalização</li>
-                        <li>Informações de navegação (cookies, logs e dispositivo)</li>
+                        <li>Informações de navegação cookies, logs e dispositivo</li>
                     </ul>
 
                     <h2>4. FINALIDADE DO USO DOS DADOS</h2>
@@ -111,7 +111,7 @@ const PrivacyPolicy = () => {
 
                     <h2>9. ATENDIMENTO</h2>
                     <ul>
-                        <li>WhatsApp: (19) 99327-3002</li>
+                        <li>WhatsApp: 19 99327-3002</li>
                     </ul>
 
                     <h2>10. ALTERAÇÕES NA POLÍTICA</h2>

@@ -19,7 +19,7 @@ const TermsOfUse = () => {
                     <p>
                         Ao acessar e utilizar os serviços da plataforma Prospéritté Consult, você concorda integralmente com estes Termos de Uso. Caso não concorde, solicitamos que não utilize nossos serviços.
                         <br /><br />
-                        Estes Termos regem a relação entre você (usuário) e a Prospéritté Consult, sendo aplicáveis ao uso do site, plataformas, canais de atendimento e quaisquer serviços oferecidos.
+                        Estes Termos regem a relação entre você usuário e a Prospéritté Consult, sendo aplicáveis ao uso do site, plataformas, canais de atendimento e quaisquer serviços oferecidos.
                     </p>
 
                     <h2>2. OBJETO DOS TERMOS</h2>
