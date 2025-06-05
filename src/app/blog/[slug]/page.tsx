@@ -48,7 +48,7 @@ function generatePostData(slug: string) {
             title: 'Golpes em consórcio: como se proteger de fraudes e armadilhas',
             reading: '9 minutos de leitura',
             content: (
-                <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
+                <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
                     <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
                         O perigo dos golpes em consórcio
                     </h2>
@@ -100,7 +100,7 @@ function generatePostData(slug: string) {
                         <li style={{ marginBottom: '8px' }}>Solicitação de pagamento antecipado via PIX, boleto ou conta de pessoa física.</li>
                         <li style={{ marginBottom: '8px' }}>Perfis em redes sociais sem CNPJ, sem endereço fixo e sem site oficial.</li>
                         <li style={{ marginBottom: '8px' }}>Dificuldade em encontrar informações da suposta empresa no Banco Central.</li>
-                        <li style={{ marginBottom: '8px' }}>Pressão psicológica com frases como "Últimas vagas", "Só hoje" ou "Oferta exclusiva".</li>
+                        <li style={{ marginBottom: '8px' }}>Pressão psicológica com frases como &quot;Últimas vagas&quot;, &quot;Só hoje&quot; ou &quot;Oferta exclusiva&quot;.</li>
                     </ol>
 
                     <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
@@ -129,7 +129,7 @@ function generatePostData(slug: string) {
                         Dicas extras para sua segurança
                     </h3>
 
-                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                    <ul style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
                         <li style={{ marginBottom: '8px' }}>
                             Nunca envie dados pessoais por WhatsApp sem confirmar a autenticidade da empresa.
                         </li>
@@ -145,7 +145,7 @@ function generatePostData(slug: string) {
                         <li style={{ marginBottom: '8px' }}>
                             Em caso de dúvida, fale diretamente com a administradora, sem intermediários.
                         </li>
-                    </ol>
+                    </ul>
 
                     <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
                         O que fazer se cair em um golpe
@@ -188,21 +188,100 @@ function generatePostData(slug: string) {
     if (slug.includes('tendencias')) {
         return {
             title: 'Tendências do setor de consórcios em 2024',
-            reading: '6 minutos de leitura',
+            reading: '7 minutos de leitura',
             content: (
-                <>
-                    <h2 style={{ color: '#100f30' }}>O que esperar do mercado de consórcios</h2>
-                    <p style={{ color: '#616161' }}>O setor de consórcios segue em crescimento, impulsionado pela busca de alternativas de crédito mais acessíveis e sem juros. Em 2024, a digitalização e a personalização das cotas são tendências fortes.</p>
-                    <h3 style={{ color: '#100f30' }}>Principais tendências</h3>
-                    <ul style={{ color: '#616161' }}>
-                        <li>Consórcios 100% digitais e atendimento online personalizado.</li>
-                        <li>Planos flexíveis e adaptados ao perfil do cliente.</li>
-                        <li>Maior transparência e educação financeira para o consumidor.</li>
-                        <li>Expansão para novos segmentos, como serviços e energia solar.</li>
+                <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
+                    <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
+                        O cenário do consórcio no Brasil: tendências e perspectivas para 2024
+                    </h2>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O mercado de consórcios no Brasil tem apresentado crescimento consistente nos últimos anos, consolidando-se como uma alternativa sólida para aquisição de bens e serviços. Em 2024, o setor se destaca não apenas pelo volume de negócios, mas também pela inovação e adaptação às novas demandas dos consumidores.
+                    </p>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        Segundo dados da Associação Brasileira de Administradoras de Consórcios (ABAC), o número de participantes ativos ultrapassou a marca de 9 milhões, refletindo a confiança do brasileiro nesse modelo de compra planejada. A busca por alternativas ao crédito tradicional, especialmente diante das altas taxas de juros, impulsiona ainda mais o segmento.
+                    </p>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Principais tendências para o ano
+                    </h3>
+
+                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Digitalização dos processos:</strong> Administradoras investem em plataformas digitais, facilitando adesão, acompanhamento de cotas e participação em assembleias online.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Personalização de planos:</strong> Novos produtos permitem que o consorciado escolha prazos, valores de crédito e até mesmo a forma de contemplação, tornando o consórcio mais flexível.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Expansão para novos segmentos:</strong> Além de imóveis e veículos, cresce a procura por consórcios de serviços, energia solar, educação e até procedimentos médicos.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Educação financeira:</strong> Administradoras promovem conteúdos e eventos para orientar o consumidor sobre planejamento e uso consciente do consórcio.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Transparência e segurança:</strong> O setor investe em tecnologia para garantir a autenticidade das operações e proteger os dados dos clientes.
+                        </li>
+                    </ol>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Oportunidades e desafios do setor
+                    </h3>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O consórcio se consolida como alternativa de investimento e planejamento financeiro, especialmente em tempos de instabilidade econômica. A possibilidade de adquirir bens sem juros e com parcelas acessíveis atrai diferentes perfis de consumidores, do investidor ao comprador de primeira viagem.
+                    </p>
+
+                    <ul style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Oportunidade:</strong> O aumento da procura por consórcios de imóveis e veículos, impulsionado pela dificuldade de acesso ao crédito tradicional.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Desafio:</strong> Manter a atratividade dos grupos diante da concorrência com financiamentos e outras modalidades de crédito.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Oportunidade:</strong> Crescimento dos consórcios de serviços, que permitem ao consumidor planejar viagens, reformas e até procedimentos de saúde.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Desafio:</strong> Garantir a segurança digital e a transparência nas operações online.
+                        </li>
                     </ul>
-                    <h3 style={{ color: '#100f30' }}>Oportunidades para investidores</h3>
-                    <p style={{ color: '#616161' }}>O consórcio se consolida como opção de investimento seguro e planejado, especialmente para imóveis e veículos. Fique atento às novidades e aproveite as melhores oportunidades!</p>
-                </>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Dicas para quem deseja entrar em um consórcio em 2024
+                    </h3>
+
+                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            Pesquise a reputação da administradora junto ao Banco Central e órgãos de defesa do consumidor.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Analise o regulamento do grupo, prazos, taxas e condições de contemplação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Planeje seu orçamento para manter as parcelas em dia e aumentar suas chances de contemplação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Fique atento às oportunidades de lances e sorteios, que podem antecipar a conquista do bem.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Utilize os canais digitais para acompanhar sua cota e participar das assembleias.
+                        </li>
+                    </ol>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Conclusão
+                    </h3>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O consórcio segue como uma das melhores opções para quem busca planejamento, economia e segurança na aquisição de bens e serviços. Em 2024, a inovação e a digitalização tornam o processo ainda mais acessível e transparente, beneficiando milhões de brasileiros.
+                    </p>
+
+                    <p style={{ color: '#616161' }}>
+                        Antes de aderir, informe-se, compare opções e escolha uma administradora confiável. Assim, você garante uma experiência positiva e realiza seus objetivos com tranquilidade.
+                    </p>
+                </div>
             ),
         };
     }
@@ -211,49 +290,196 @@ function generatePostData(slug: string) {
             title: 'Planejamento financeiro com consórcio',
             reading: '7 minutos de leitura',
             content: (
-                <>
-                    <h2 style={{ color: '#100f30' }}>Por que o consórcio é aliado do planejamento</h2>
-                    <p style={{ color: '#616161' }}>O consórcio permite adquirir bens de forma programada, sem juros e com parcelas acessíveis. É ideal para quem quer se organizar financeiramente e evitar dívidas.</p>
-                    <h3 style={{ color: '#100f30' }}>Vantagens do consórcio para seu bolso</h3>
-                    <ul style={{ color: '#616161' }}>
-                        <li>Parcelas que cabem no orçamento.</li>
-                        <li>Sem entrada e sem juros.</li>
-                        <li>Possibilidade de antecipar a contemplação com lances.</li>
-                        <li>Flexibilidade para usar o crédito em diferentes tipos de bens.</li>
+                <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
+                    <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
+                        Como o consórcio pode transformar seu planejamento financeiro
+                    </h2>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O planejamento financeiro é fundamental para quem deseja conquistar objetivos de médio e longo prazo sem comprometer a saúde do orçamento. O consórcio surge como uma ferramenta estratégica, permitindo a aquisição de bens e serviços de forma programada, sem juros e com parcelas acessíveis.
+                    </p>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        Ao optar pelo consórcio, o consumidor foge das armadilhas do crédito caro e aprende a poupar de maneira disciplinada. O sistema é simples: um grupo de pessoas se reúne para contribuir mensalmente em um fundo comum, e, a cada mês, um ou mais participantes são contemplados por sorteio ou lance.
+                    </p>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Vantagens do consórcio para o seu bolso
+                    </h3>
+
+                    <ul style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Sem juros:</strong> Ao contrário do financiamento, o consórcio não cobra juros, apenas uma taxa de administração diluída ao longo do plano.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Parcelas acessíveis:</strong> O valor das parcelas é ajustado ao orçamento do participante, facilitando o controle financeiro.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Flexibilidade:</strong> O crédito pode ser utilizado para diferentes finalidades, como compra de imóveis, veículos, reformas ou serviços.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Disciplina:</strong> O compromisso mensal incentiva o hábito de poupar e evita gastos impulsivos.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Possibilidade de antecipação:</strong> O participante pode ofertar lances para tentar ser contemplado antes do prazo final.
+                        </li>
                     </ul>
-                    <h3 style={{ color: '#100f30' }}>Dicas para um bom planejamento</h3>
-                    <ul style={{ color: '#616161' }}>
-                        <li>Defina seu objetivo e prazo.</li>
-                        <li>Escolha o grupo certo para seu perfil.</li>
-                        <li>Conte com o suporte de especialistas para simular cenários.</li>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Como incluir o consórcio no seu planejamento
+                    </h3>
+
+                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            Defina seu objetivo: imóvel, carro, serviço ou investimento.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Calcule o valor necessário e o prazo desejado para a conquista.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Escolha uma administradora autorizada pelo Banco Central e analise as condições do grupo.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Reserve uma parte do orçamento mensal para as parcelas, evitando comprometer outras despesas essenciais.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Acompanhe as assembleias e oportunidades de lance para antecipar a contemplação.
+                        </li>
+                    </ol>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Dicas para potencializar seus resultados
+                    </h3>
+
+                    <ul style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            Mantenha as parcelas em dia para não perder oportunidades de contemplação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Utilize simuladores online para comparar planos e valores.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Fique atento às regras de reajuste do crédito e das parcelas.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Considere a possibilidade de vender a carta contemplada como estratégia de investimento.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Busque orientação de especialistas para tirar dúvidas e planejar melhor sua participação.
+                        </li>
                     </ul>
-                    <p style={{ color: '#616161' }}>Com disciplina e informação, o consórcio pode ser o caminho mais seguro para realizar seus sonhos!</p>
-                </>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Conclusão
+                    </h3>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O consórcio é uma solução inteligente para quem deseja realizar sonhos sem comprometer o orçamento. Com planejamento, disciplina e informação, é possível conquistar bens e serviços de forma segura, econômica e eficiente.
+                    </p>
+
+                    <p style={{ color: '#616161' }}>
+                        Antes de aderir, avalie suas necessidades, compare opções e escolha uma administradora confiável. Assim, você garante tranquilidade e sucesso em seu planejamento financeiro.
+                    </p>
+                </div>
             ),
         };
     }
     if (slug.includes('imposto')) {
         return {
             title: 'Imposto na compra de carro com consórcio',
-            reading: '6 minutos de leitura',
+            reading: '7 minutos de leitura',
             content: (
-                <>
-                    <h2 style={{ color: '#100f30' }}>Como funciona a tributação</h2>
-                    <p style={{ color: '#616161' }}>Ao adquirir um veículo por consórcio, é importante entender os impostos envolvidos, como o IOF e o IPVA. O consórcio não tem juros, mas há taxas administrativas e eventuais tributos na transferência do bem.</p>
-                    <h3 style={{ color: '#100f30' }}>Principais impostos e taxas</h3>
-                    <ul style={{ color: '#616161' }}>
-                        <li>IOF: incide sobre operações de crédito, mas não sobre consórcio.</li>
-                        <li>IPVA: obrigatório após a transferência do veículo.</li>
-                        <li>Taxa de transferência: cobrada pelo Detran.</li>
+                <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
+                    <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
+                        Impostos e taxas na compra de carro por consórcio: o que você precisa saber
+                    </h2>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        Ao adquirir um veículo por consórcio, é fundamental entender todos os custos envolvidos, especialmente os impostos e taxas obrigatórias. Embora o consórcio seja uma alternativa sem juros, existem tributos e despesas que devem ser considerados no planejamento financeiro.
+                    </p>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O desconhecimento dessas obrigações pode gerar surpresas desagradáveis e comprometer o orçamento. Por isso, é importante conhecer cada etapa do processo e se preparar para os pagamentos necessários após a contemplação.
+                    </p>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Principais impostos e taxas na compra de veículos
+                    </h3>
+
+                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>IPVA (Imposto sobre a Propriedade de Veículos Automotores):</strong> Tributo anual obrigatório, cujo valor varia conforme o estado e o valor do veículo.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Licenciamento:</strong> Taxa anual para regularização do veículo e emissão do documento de circulação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Taxa de transferência:</strong> Cobrada quando o veículo é transferido para o nome do consorciado após a contemplação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Seguro obrigatório (DPVAT):</strong> Destinado a indenizar vítimas de acidentes de trânsito, pode ser cobrado junto ao licenciamento.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Taxa de administração:</strong> Valor cobrado pela administradora do consórcio, diluído nas parcelas.
+                        </li>
+                    </ol>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Dicas para evitar surpresas com impostos e taxas
+                    </h3>
+
+                    <ul style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            Consulte a tabela de IPVA do seu estado antes de adquirir o veículo.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Reserve um valor extra para cobrir taxas de transferência e licenciamento.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Fique atento ao calendário de pagamento do IPVA e do licenciamento para evitar multas.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Verifique se o seguro obrigatório está incluído nas despesas iniciais.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Analise o contrato do consórcio para entender todas as taxas cobradas pela administradora.
+                        </li>
                     </ul>
-                    <h3 style={{ color: '#100f30' }}>Vantagens fiscais do consórcio</h3>
-                    <ul style={{ color: '#616161' }}>
-                        <li>Sem juros embutidos nas parcelas.</li>
-                        <li>Possibilidade de diluir custos ao longo do tempo.</li>
-                        <li>Planejamento tributário mais eficiente.</li>
-                    </ul>
-                    <p style={{ color: '#616161' }}>Consulte sempre a administradora e um contador para evitar surpresas e aproveitar todos os benefícios fiscais!</p>
-                </>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Como se planejar para os custos pós-contemplação
+                    </h3>
+
+                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            Inclua no seu planejamento financeiro todos os tributos e taxas obrigatórias.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Após a contemplação, solicite à administradora um detalhamento dos custos para transferência e regularização do veículo.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Guarde todos os comprovantes de pagamento para evitar problemas futuros.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Considere contratar um seguro adicional para proteger seu patrimônio.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Mantenha-se informado sobre possíveis mudanças na legislação tributária.
+                        </li>
+                    </ol>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Conclusão
+                    </h3>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O consórcio é uma excelente alternativa para adquirir um veículo sem juros, mas é fundamental conhecer e se preparar para os impostos e taxas obrigatórias. Com planejamento, é possível evitar surpresas e garantir uma experiência tranquila e segura.
+                    </p>
+
+                    <p style={{ color: '#616161' }}>
+                        Antes de aderir, informe-se sobre todos os custos envolvidos e mantenha seu orçamento organizado. Assim, você aproveita todos os benefícios do consórcio e realiza seu sonho com tranquilidade.
+                    </p>
+                </div>
             ),
         };
     }
@@ -262,24 +488,94 @@ function generatePostData(slug: string) {
             title: 'Quatro veículos Hyundai novos no consórcio',
             reading: '7 minutos de leitura',
             content: (
-                <>
-                    <h2 style={{ color: '#100f30' }}>Por que escolher Hyundai no consórcio</h2>
-                    <p style={{ color: '#616161' }}>Adquirir um Hyundai zero km por consórcio é uma alternativa inteligente para quem busca economia e flexibilidade. Os modelos da marca são reconhecidos pela qualidade e baixo custo de manutenção.</p>
-                    <h3 style={{ color: '#100f30' }}>Vantagens exclusivas</h3>
-                    <ul style={{ color: '#616161' }}>
-                        <li>Parcelas acessíveis e sem juros.</li>
-                        <li>Modelos para todos os perfis.</li>
-                        <li>Facilidade na contemplação e uso do crédito.</li>
-                        <li>Assistência técnica e garantia de fábrica.</li>
+                <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
+                    <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
+                        Hyundai no consórcio: conheça quatro opções de veículos zero km para 2024
+                    </h2>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        Adquirir um veículo Hyundai zero km por meio do consórcio é uma alternativa cada vez mais procurada por quem busca economia, flexibilidade e segurança. A marca se destaca no mercado brasileiro pela qualidade, tecnologia e baixo custo de manutenção, tornando-se uma escolha inteligente para diferentes perfis de consumidores.
+                    </p>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O consórcio permite planejar a compra do carro novo sem pagar juros, com parcelas acessíveis e possibilidade de antecipação da contemplação por meio de lances. Em 2024, quatro modelos Hyundai se destacam como excelentes opções para quem deseja investir em mobilidade e conforto.
+                    </p>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Modelos Hyundai em destaque
+                    </h3>
+
+                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>HB20:</strong> Compacto, econômico e com design moderno, o HB20 é ideal para o dia a dia urbano. Oferece baixo consumo de combustível, tecnologia embarcada e ótimo valor de revenda.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Creta:</strong> SUV com amplo espaço interno, conforto e segurança. O Creta é perfeito para famílias e quem busca versatilidade, com versões que atendem diferentes necessidades.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>HB20S:</strong> A versão sedã do HB20 alia elegância, porta-malas espaçoso e excelente desempenho, sendo uma ótima opção para quem precisa de mais espaço sem abrir mão da economia.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Santa Fe:</strong> SUV premium, com acabamento sofisticado, tecnologia de ponta e alto padrão de segurança. Indicado para quem busca luxo e performance.
+                        </li>
+                    </ol>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Vantagens de comprar Hyundai pelo consórcio
+                    </h3>
+
+                    <ul style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Sem juros:</strong> O consórcio não cobra juros, apenas taxa de administração diluída.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Parcelas acessíveis:</strong> O valor das parcelas cabe no orçamento e pode ser ajustado conforme a necessidade.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Flexibilidade:</strong> Possibilidade de ofertar lances para antecipar a contemplação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Garantia de fábrica:</strong> Todos os modelos adquiridos por consórcio contam com garantia e assistência técnica da Hyundai.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>Valorização:</strong> Veículos Hyundai têm excelente valor de revenda, tornando o investimento ainda mais seguro.
+                        </li>
                     </ul>
-                    <h3 style={{ color: '#100f30' }}>Dicas para aproveitar o consórcio</h3>
-                    <ul style={{ color: '#616161' }}>
-                        <li>Pesquise os modelos disponíveis.</li>
-                        <li>Simule diferentes valores e prazos.</li>
-                        <li>Conte com o suporte da Prospéritté Consult para tirar dúvidas.</li>
-                    </ul>
-                    <p style={{ color: '#616161' }}>Com planejamento, o consórcio Hyundai pode ser o melhor negócio para seu próximo carro!</p>
-                </>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Como participar de um consórcio Hyundai
+                    </h3>
+
+                    <ol style={{ color: '#616161', paddingLeft: '20px', marginBottom: '24px' }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            Escolha o modelo Hyundai que melhor atende suas necessidades.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Procure uma administradora autorizada e simule o valor do crédito e das parcelas.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Analise o regulamento do grupo, prazos e condições de contemplação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Reserve parte do orçamento para ofertar lances, caso deseje antecipar a contemplação.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            Acompanhe as assembleias e mantenha as parcelas em dia para garantir sua participação.
+                        </li>
+                    </ol>
+
+                    <h3 style={{ color: '#100f30', marginBottom: '12px' }}>
+                        Conclusão
+                    </h3>
+
+                    <p style={{ color: '#616161', marginBottom: '12px' }}>
+                        O consórcio Hyundai é uma alternativa inteligente para quem deseja adquirir um veículo zero km com economia, segurança e flexibilidade. Com planejamento, é possível conquistar o carro dos sonhos sem comprometer o orçamento.
+                    </p>
+
+                    <p style={{ color: '#616161' }}>
+                        Antes de aderir, pesquise, compare opções e escolha uma administradora confiável. Assim, você garante uma experiência positiva e aproveita todos os benefícios que só o consórcio pode oferecer.
+                    </p>
+                </div>
             ),
         };
     }
