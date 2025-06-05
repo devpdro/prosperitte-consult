@@ -1,5 +1,4 @@
 import LOGO from './LOGO.png'
-import CASAL from './CASAL-SOBREPOSICAO.webp'
 import CASA from './CASA.jpg'
 import CARRO from './CARRO.jpg'
 import CONSTRUCAO from './CONSTRUCAO.jpg'
@@ -10,10 +9,31 @@ import ATENCAO_CLIENTE from './ATENCAO_CLIENTE.jpg'
 import EMPRESA from './EMPRESA.jpg'
 import SEGURANCA from './SEGURANCA.jpg'
 import TRANSPARENCIA from './TRANSPARENCIA.jpg'
+import ANCORA from './ANCORA.png'
+import EMBRACON from './EMBRACON.webp'
+import HS from './HS.webp'
+import SANTANDER from './SANTANDER.webp'
+import RODOBENS from './RODOBENS.jpg'
+import HEADER from './HEADER.webp'
+import TENDENCIAS from './TENDENCIAS.jpg'
+import GOLPES from './GOLPES.jpg'
+import PLANEJAMENTO from './PLANEJAMENTO.jpg'
+import QUATRO_VEICULOS_NOVOS_HYNDAI from './4_VEICULOS_NOVOS_HYNDAI.webp'
+import IMPOSTO_COMPRA_CARRO from './IMPOSTO_COMPRA_CARRO.webp'
 
 const IMAGE = {
+  QUATRO_VEICULOS_NOVOS_HYNDAI,
+  IMPOSTO_COMPRA_CARRO,
+  TENDENCIAS,
+  PLANEJAMENTO,
+  GOLPES,
+  HEADER, 
+  ANCORA,
+  EMBRACON,
+  HS,
+  SANTANDER,
+  RODOBENS,
   LOGO,
-  CASAL,
   CASA,
   CARRO,
   CONSTRUCAO,

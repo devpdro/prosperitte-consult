@@ -17,7 +17,6 @@ const cards = [
         taxa: 'Taxa de administração a partir de 0,14% a.m',
         credito: 'Crédito de R$ 150 mil até R$ 700 mil',
         parcela: 'Parcelas a partir de R$ 700,00 no Plano Flex',
-        obs: 'Perfeito para quem busca caminhões, tratores, ônibus, embarcações e implementos agrícolas ou rodoviários.'
     },
     {
         image: IMAGE.CONSTRUCAO.src,
@@ -26,7 +25,6 @@ const cards = [
         taxa: 'Taxa de administração a partir de 0,10% a.m.',
         credito: 'Crédito de R$ 80 mil até R$ 500 mil.',
         parcela: 'Parcelas a partir de R$ 209,00 no Plano Flex.',
-        obs: 'Use seu crédito para construir, reformar, ampliar ou finalizar obras de imóveis residenciais ou comerciais.'
     },
     {
         image: IMAGE.CARRO.src,
@@ -35,7 +33,6 @@ const cards = [
         taxa: 'Taxa de administração a partir de 0,14% a.m.',
         credito: 'Crédito de R$ 20 mil até R$ 150 mil.',
         parcela: 'Parcelas a partir de R$ 156,00 no Plano Flex.',
-        obs: 'Ideal para carros, motos e veículos novos ou seminovos, sem juros e sem entrada.'
     },
     {
         image: IMAGE.CASA.src,
@@ -44,7 +41,6 @@ const cards = [
         taxa: 'Taxa de administração a partir de 0,10% a.m.',
         credito: 'Crédito de R$ 80 mil até R$ 500 mil.',
         parcela: 'Parcelas a partir de R$ 209,00 no Plano Flex.',
-        obs: 'Adquira sua casa, apartamento, terreno ou imóvel comercial sem juros e sem entrada.'
     },
 ]
 
@@ -69,7 +65,6 @@ const Achievement = () => {
                                 <li>{card.credito}</li>
                                 <li>{card.parcela}</li>
                             </ul>
-                            <div className={S.cardObs}>{card.obs}</div>
                         </div>
                     </div>
                 ))}

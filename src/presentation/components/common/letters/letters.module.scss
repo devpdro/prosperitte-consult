@@ -1,0 +1,252 @@
+.lettersSection {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 38px 2rem 0 2rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #100f30;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    color: #757575;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 48px;
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.lettersTable {
+    width: 100%;
+    background: transparent;
+}
+
+.lettersTable th {
+    background: #100f30;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 18px 0;
+    text-align: center;
+    border: none;
+}
+
+.lettersTable th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.lettersTable th:last-child {
+    border-top-right-radius: 10px;
+
+}
+
+.lettersTable tr {
+    background: #100f30;
+    margin-top: 10px;
+    
+}
+
+.lettersTable tbody tr:not(:last-child) {
+    border-bottom: 2px solid #fff;
+}
+
+.lettersTable td {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    border: none;
+    background: transparent;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.lettersTable tr td:last-child {
+    text-align: center;
+    padding-right: 0;
+}
+
+.whatsappBtn {
+    background: #FACA5D;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    padding: 10px 28px;
+    font-size: 13px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: none;
+}
+
+.whatsappBtn:hover {
+    background: #9a6609;
+}
+
+.ctaContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 48px 0 0 0;
+}
+
+.ctaText {
+    color: #757575;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.ctaBtn {
+    background: #FACA5D;
+    color: #fff;
+    border: none;
+    border-radius: 32px;
+    padding: 16px 48px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 8px 0 rgba(44, 41, 74, 0.08);
+    font-weight: 400;
+}
+
+.ctaBtn:hover {
+    background: #9a6609;
+}
+
+.rowEven {
+    background: #100f30;
+}
+
+.rowOdd {
+    background: #100f30;
+}
+
+@media (max-width: 900px) {
+    .lettersSection {
+        padding: 32px 4px 0 4px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .lettersTable th,
+    .lettersTable td {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .ctaBtn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .lettersSection {
+        padding: 16px 0 0 0;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .lettersTable th,
+    .lettersTable td {
+        font-size: 0.95rem;
+        padding: 7px 0;
+    }
+
+    .whatsappBtn {
+        padding: 7px 12px;
+        font-size: 0.95rem;
+    }
+
+    .ctaBtn {
+        padding: 10px 10vw;
+        font-size: 0.95rem;
+    }
+
+    .ctaText {
+        font-size: 0.95rem;
+    }
+
+    .tableWrapper {
+        display: none;
+    }
+
+    .mobileCards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .mobileCard {
+        background: #100f30;
+        border-radius: 12px;
+        padding: 32px 12px 24px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 2px 8px 0 rgba(44, 41, 74, 0.08);
+    }
+
+    .mobileCardInfo {
+        color: #fff;
+        font-size: 1.1rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 18px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .whatsappBtn {
+        margin: 0 auto;
+    }
+
+    .mobileCard.rowEven {
+        background: #6336c7;
+    }
+
+    .mobileCard.rowOdd {
+        background: #6d3fd1;
+    }
+}
+
+@media (min-width: 601px) {
+    .mobileCards {
+        display: none !important;
+    }
+}

@@ -1,10 +1,10 @@
-import { Achievement, About, Path, Benefits, Faq, Footer, Header, Meta, Navbar, Rate, Steps, Warning } from "src/presentation/components"
+import { Achievement, About, Path, Benefits, Faq, Footer, Header, Meta, Navbar, Rate, Steps, Letters, Representatives, Contact } from "src/presentation/components"
 import { ICON, IMAGE } from 'src/presentation/assets'
 
 import S from './home.module.scss'
 
 const Home = () => {
-  const IMAGES = IMAGE.CASAL
+  const IMAGES = IMAGE.HEADER
 
   return (
     <div>
@@ -19,14 +19,16 @@ const Home = () => {
         paragraph="*Aqui seu consórcio é simples, rápido e sem burocracia"
         image={IMAGES.src} />
 
-      <Warning />
+      <Representatives />
       <Achievement />
+      <Letters />
       <Path />
       <Benefits />
       <Rate />
       <Steps />
       <About />
       <Faq />
+      <Contact />
       <Footer />
 
       <a

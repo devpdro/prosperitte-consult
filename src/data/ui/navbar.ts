@@ -2,20 +2,28 @@ import { NavbarItemProps } from 'src/data/models'
 
 export const MENU: NavbarItemProps[] = [
   {
-    label: 'Consórcios',
-    link: '#consorcio',
+    label: 'Faça uma simulação',
+    link: '#faca-uma-simulacao',
+  },
+  {
+    label: 'Cartas contempladas',
+    link: '#cartas-contempladas',
+  },
+  {
+    label: 'Quem somos',
+    link: '#quem-somos',
   },
   {
     label: 'Como funciona',
     link: '#como-funciona',
   },
   {
-    label: 'Benefícios',
-    link: '#beneficios',
+    label: 'Contato',
+    link: '#contato',
   },
   {
-    label: 'Perguntas frequentes',
-    link: '#perguntas-frequentes',
+    label: 'Blog',
+    link: '/blog',
   },
 
 ]

@@ -48,8 +48,12 @@ const LoanRequest = () => {
             O momento é agora!
           </legend>
 
+          <p className={S.paragraphSubtitle}>
+            Aproveite esse momento de menor competitividade e saia na frente. Garanta taxas mais atraentes, maior margem de negociação e aproveite a tendência por menores lances para contemplar.
+          </p>
 
           <select
+            defaultValue=""
             className={`${S['input-text']} ${errors.tipoSolicitacao ? S['input-text-error'] : ''}`}
             {...register('tipoSolicitacao', {
               required: 'Tipo de solicitação é obrigatório',
@@ -58,14 +62,8 @@ const LoanRequest = () => {
             <option value="" disabled hidden>
               Que tipo de produto você busca?
             </option>
-            <option className={S['option']} value="Imóvel Novo">
-              Imóvel Novo
-            </option>
-            <option className={S['option']} value="Imóvel Usado">
-              Imóvel Usado
-            </option>
-            <option className={S['option']} value="Imóvel Rural">
-              Imóvel Rural
+            <option className={S['option']} value="Imóvel">
+              Imóvel
             </option>
             <option className={S['option']} value="Terreno">
               Terreno
@@ -83,10 +81,7 @@ const LoanRequest = () => {
               Investimento
             </option>
             <option className={S['option']} value="Carro Novo">
-              Carro Novo
-            </option>
-            <option className={S['option']} value="Carro Usado">
-              Carro Usado
+              Carro
             </option>
             <option className={S['option']} value="Caminhão">
               Caminhão
@@ -136,7 +131,7 @@ const LoanRequest = () => {
             className={`${S['input-text']} ${S['margin-btn']} ${errors.whatsapp ? S['input-text-error'] : ''}`}
             type="tel"
             inputMode="tel"
-            placeholder="Telefone com DDD"
+            placeholder="Telefone (com DDD)"
           />
 
           <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Simular agora' : 'Simular agora'} />

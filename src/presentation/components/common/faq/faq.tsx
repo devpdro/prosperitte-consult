@@ -44,7 +44,6 @@ export default function FAQ() {
                     <p className={styles.subtitle}>
                         Tire suas dúvidas e descubra por que o consórcio é uma alternativa segura, flexível e econômica para conquistar seus objetivos.
                     </p>
-                    <button className={styles.button}>Confira perguntas frequentes</button>
                 </div>
                 <div className={styles.right}>
                     {QUESTIONS.map((q, i) => (

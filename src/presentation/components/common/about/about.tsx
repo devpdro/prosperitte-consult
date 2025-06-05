@@ -42,14 +42,25 @@ const About = () => (
         <div className={S.topRow}>
             <div className={S.left}>
                 <h2 className={S.title}>
-                    <span className={S.hashtag}>#Diferenciais:</span><br />
-                    Por que somos diferentes
+                    Quem somos
                 </h2>
                 <p className={S.subtitle}>
-                    Na Prospéritté Consult, nosso propósito é ser a bússola que guia você na realização dos seus sonhos.
-                    Assim como navegadores se orientavam pelas estrelas, estamos aqui para te conduzir pelo caminho certo, com segurança, transparência e as melhores condições do mercado.
-                    Com o suporte das maiores administradoras do Brasil, ajudamos você a conquistar seu imóvel, veículo ou serviço, de forma planejada, sem juros e sem burocracia.
-                    Prospéritté Consult. O caminho certo para seus sonhos.
+                    Fundada em 2018 e sediada em Piracicaba-SP, a Prospéritté Consult nasceu com uma missão clara:
+                    transformar o potencial de crescimento patrimonial em realidade acessível para nossos clientes.
+                    Com mais de 10 anos de experiência dos sócios no mercado de consórcios e seguros, desenvolvemos
+                    uma abordagem consultiva que vai além da simples venda de produtos financeiros.<br /><br />
+
+                    Atuamos em todo o território nacional, oferecendo soluções inteligentes para aquisição e investimento
+                    em imóveis, veículos e outros bens. Trabalhamos com as maiores administradoras do país – HS Consórcios,
+                    Âncora, Embracon e Rodobens – mas nosso verdadeiro diferencial está na consultoria estratégica que
+                    antecede qualquer recomendação.<br /><br />
+
+                    Nossa especialidade é a alavancagem patrimonial inteligente. Através de estratégias estruturadas, ajudamos
+                    investidores a acelerar o crescimento do patrimônio, como no Prospéritté 7.0, nosso programa exclusivo
+                    de investimento imobiliário.<br /><br />
+
+                    Acreditamos que decisões financeiras devem ser tomadas com planejamento e análise. Por isso, cada cliente
+                    recebe um atendimento personalizado, que transforma complexidade em clareza e oportunidades em resultados.
                 </p>
             </div>
             <div className={S.right}>

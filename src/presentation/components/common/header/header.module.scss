@@ -7,7 +7,7 @@
   background-position: left center;
   color: $color-snow;
   max-width: 100%;
-  height: 100vh;
+  height: 103vh;
   z-index: 2;
 
   @media (min-width: 625px) and (max-width: 994px) {
@@ -15,7 +15,7 @@
   }
 
   @media (max-width: 624px) {
-    height: 130vh;
+    height: 135vh;
   }
 
   .box-section {

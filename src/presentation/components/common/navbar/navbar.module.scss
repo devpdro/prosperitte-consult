@@ -25,15 +25,15 @@
   gap: 1rem;
 
   .logo {
-    width: 175px;
-    height: 50px;
+    width: 200px;
+    height: 58px;
   }
 }
 
 .nav-items {
   display: none;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1264px) {
     @include display-flex(center, center);
     padding: 2rem;
 
@@ -46,7 +46,9 @@
       .link-text {
         @include display-flex(center, center);
         color: $color-snow;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 400;
         gap: 0.4rem;
         transition: color 0.1s ease;
 
@@ -65,8 +67,8 @@
   border-radius: 5px;
   padding: 0.8rem 1.2rem;
   margin-left: 1.25rem;
-  background-color: $color-secondary;
-  color: $color-primaryFade;
+  background-color: $color-success;
+  color: $color-snow;
   font-weight: 400;
 
   .link {
@@ -81,7 +83,7 @@
     display: none;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1264px) {
     display: flex;
   }
 }
@@ -92,7 +94,7 @@
   font-size: $font-medium;
   color: $color-secondary;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1264px) {
     display: none;
   }
 }

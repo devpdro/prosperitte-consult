@@ -14,6 +14,7 @@ type HeaderProps = {
 
 const Header = ({ title, subtitle, image, paragraph, showLoanRequest = true }: HeaderProps) => (
   <header
+    id='faca-uma-simulacao'
     className={S.container}
     style={{
       backgroundImage: `url(${image})`,

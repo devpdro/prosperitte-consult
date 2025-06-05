@@ -59,23 +59,17 @@ const Navbar = () => {
                   {item.children && <IconChevronDown className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
                 </a>
               ) : (
-                <Link href={item.link ?? '#'} legacyBehavior>
-                  <a className={S['link-text']}>
-                    <span>{item.label}</span>
-                    {item.children && <IconChevronDown className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
-                  </a>
+                <Link href={item.link ?? '#'} className={S['link-text']}>
+                  <span>{item.label}</span>
+                  {item.children && <IconChevronDown className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
                 </Link>
               )}
               {item.children && (
                 <div className={S.dropdown}>
                   {item.children.map((item: MenuItem, key: number) => (
-                    <Link key={key} href={item.link} legacyBehavior>
-                      <a
-                        className={S['dropdown-link']}
-                      >
-                        <span className={S['link-label']}>{item.label}</span>
-                        {item.new && <p className={S.new}>{item.new}</p>}
-                      </a>
+                    <Link key={key} href={item.link} className={S['dropdown-link']}>
+                      <span className={S['link-label']}>{item.label}</span>
+                      {item.new && <p className={S.new}>{item.new}</p>}
                     </Link>
                   ))}
                 </div>
@@ -84,10 +78,8 @@ const Navbar = () => {
           ))}
           <aside className={S['right-section']}>
             <IconBrandWhatsapp className={S.icon} />
-            <a href="https://api.whatsapp.com/send?phone=5519993273002&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20tenho%20interesse%20em%20simular%20meu%20cons%C3%B3rcio.%20Poderiam%20me%20ajudar%20a%20encontrar%20a%20melhor%20op%C3%A7%C3%A3o?">
-              <a className={S.link}>
-                <span>Simular agora</span>
-              </a>
+            <a href="https://api.whatsapp.com/send?phone=5519993273002&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20tenho%20interesse%20em%20simular%20meu%20cons%C3%B3rcio.%20Poderiam%20me%20ajudar%20a%20encontrar%20a%20melhor%20op%C3%A7%C3%A3o?" className={S.link}>
+              <span>Simular agora</span>
             </a>
           </aside>
 

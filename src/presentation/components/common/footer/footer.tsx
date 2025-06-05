@@ -1,12 +1,14 @@
 "use client";
 
 import Link from 'next/link';
-
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { IMAGE } from 'src/presentation/assets';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-
 import styles from "./footer.module.scss";
 
 export default function Footer() {
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
   const handleSmoothScroll = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     const el = document.getElementById(id);
@@ -15,16 +17,22 @@ export default function Footer() {
     }
   };
 
+  const isBlog = pathname.startsWith('/blog');
+
+  const navLinks = [
+    { label: 'Faça uma simulação', anchor: 'faca-uma-simulacao' },
+    { label: 'Cartas Contempladas', anchor: 'cartas-contempladas' },
+    { label: 'Quem somos', anchor: 'quem-somos' },
+    { label: 'Como funciona', anchor: 'como-funciona' },
+    { label: 'Contato', anchor: 'contato' },
+  ];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.columns}>
-
         <div className={styles.column}>
-          <h4>Ouvidoria</h4>
-          <ul>
-            <li>Atendimento em dias úteis das 8h às 18h (horário de Brasília)</li>
-          </ul>
-          <h5>Redes Sociais</h5>
+          <Image className={styles.logo} src={IMAGE.LOGO} alt="Logo Prospéritté Consult" width={160} height={60} style={{ marginBottom: 16 }} />
+          <h4>Redes Sociais</h4>
           <div className={styles.social}>
             <a href="https://www.facebook.com/prosperitteconsult" target="_blank" rel="noopener noreferrer">
               <FaFacebookF className={styles.icon} />
@@ -34,7 +42,31 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
+        <div className={styles.column}>
+          <h4>Fale com a gente</h4>
+          <ul>
+            <li>
+              Capitais e regiões metropolitanas<br />
+              <strong>+55 19 99327‑3002</strong>
+            </li>
+            <li>
+              Agnaldo Consórcio<br />
+              <strong>+55 19 98243-5337</strong>
+            </li>
+            <li>
+              Edgar Nunes<br />
+              <strong>+55 19 98248-3244</strong>
+            </li>
+            <li>
+              Atendimento<br />
+              <strong>19 98244-6085</strong>
+            </li>
+            <li>
+              E-mail<br />
+              <strong>suporte@prosperitteconsult.com.br</strong>
+            </li>
+          </ul>
+        </div>
         <div className={styles.column}>
           <h4>Transparência</h4>
           <ul>
@@ -48,39 +80,24 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
-        <div className={styles.column}>
-          <h4>Fale com a gente</h4>
-          <ul>
-            <li>
-              Capitais e regiões metropolitanas<br />
-              <strong>(19) 99327‑3002</strong>
-            </li>
-          </ul>
-        </div>
-
         <div className={styles.column}>
           <h4>Navegue</h4>
           <ul className={styles.navFooter}>
+            {navLinks.map(link => (
+              <li key={link.anchor}>
+                {isBlog ? (
+                  <a href={`/${'#' + link.anchor}`}>{link.label}</a>
+                ) : (
+                  <a href={`#${link.anchor}`} onClick={handleSmoothScroll(link.anchor)}>{link.label}</a>
+                )}
+              </li>
+            ))}
             <li>
-              <a href="#consorcio" onClick={handleSmoothScroll("consorcio")}>Consórcio</a>
-            </li>
-            <li>
-              <a href="#beneficios" onClick={handleSmoothScroll("beneficios")}>Benefícios</a>
-            </li>
-            <li>
-              <a href="#como-funciona" onClick={handleSmoothScroll("como-funciona")}>Como funciona</a>
-            </li>
-            <li>
-              <a href="#quem-somos" onClick={handleSmoothScroll("quem-somos")}>Quem somos</a>
-            </li>
-            <li>
-              <a href="#perguntas-frequentes" onClick={handleSmoothScroll("perguntas-frequentes")}>Perguntas frequentes</a>
+              <Link href="/blog">Blog</Link>
             </li>
           </ul>
         </div>
       </div>
-
       <div className={styles.bottom}>
         <div className={styles.copyright}>
           A Prospéritté Consult é uma consultoria especializada na intermediação de consórcios, atuando em parceria com administradoras autorizadas e fiscalizadas pelo Banco Central do Brasil, conforme a Lei nº 11.795/2008 e a Circular 3.432/2009.
