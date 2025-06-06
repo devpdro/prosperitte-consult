@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 
 import { IMAGE } from 'src/presentation/assets';
 
@@ -87,6 +86,7 @@ function generatePostData(slug: string) {
     };
 }
 
+// Normalizar categorias e contar posts
 const categoryMap: Record<string, { name: string; count: number }> = {};
 for (const post of posts) {
     const key = post.category.trim().toLowerCase();
@@ -98,18 +98,7 @@ for (const post of posts) {
 const categories = Object.values(categoryMap);
 
 export default function Highlights() {
-    const searchParams = useSearchParams();
-    const categoriaQuery = searchParams.get('categoria');
     const [selectedCategory, setSelectedCategory] = useState('Todas as Categorias');
-
-    useEffect(() => {
-        if (categoriaQuery && categories.some(cat => cat.name.toLowerCase() === categoriaQuery.toLowerCase())) {
-            setSelectedCategory(categories.find(cat => cat.name.toLowerCase() === categoriaQuery.toLowerCase())?.name || 'Todas as Categorias');
-        } else {
-            setSelectedCategory('Todas as Categorias');
-        }
-    }, [categoriaQuery]);
-
     const filteredPosts = selectedCategory === 'Todas as Categorias'
         ? posts
         : posts.filter(post => post.category.trim().toLowerCase() === selectedCategory.trim().toLowerCase());
