@@ -46,7 +46,7 @@ function generatePostData(slug: string) {
     if (slug.includes('golpes')) {
         return {
             title: 'Golpes em consórcio: como se proteger de fraudes e armadilhas',
-            reading: '9 minutos de leitura',
+            reading: '5 minutos de leitura',
             content: (
                 <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
                     <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
@@ -188,7 +188,7 @@ function generatePostData(slug: string) {
     if (slug.includes('tendencias')) {
         return {
             title: 'Tendências do setor de consórcios em 2024',
-            reading: '7 minutos de leitura',
+            reading: '6 minutos de leitura',
             content: (
                 <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
                     <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
@@ -387,7 +387,7 @@ function generatePostData(slug: string) {
     if (slug.includes('imposto')) {
         return {
             title: 'Imposto na compra de carro com consórcio',
-            reading: '7 minutos de leitura',
+            reading: '6 minutos de leitura',
             content: (
                 <div style={{ padding: '20px 0 20px 0', margin: '0 auto' }}>
                     <h2 style={{ color: '#100f30', marginBottom: '16px' }}>
