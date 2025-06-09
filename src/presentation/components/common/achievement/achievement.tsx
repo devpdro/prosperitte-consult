@@ -16,7 +16,7 @@ const cards = [
         title: 'Consórcio de Veículos Pesados',
         taxa: 'Taxa adm: a partir de 0,14% a.m.',
         credito: 'Crédito de R$ 500 mil a R$ 3 milhões',
-        parcela: 'Parcelas a partir de R$ 2.400 reais',
+        parcela: 'Parcelas a partir de R$ 1.850 reais',
     },
     {
         image: IMAGE.CONSTRUCAO.src,
@@ -24,7 +24,7 @@ const cards = [
         title: 'Consórcio para Reformar ou Construir',
         taxa: 'Taxa adm: a partir de 0,10% a.m.',
         credito: 'Crédito de R$ 100 mil a R$ 1 milhão',
-        parcela: 'Parcelas a partir de 650 reais',
+        parcela: 'Parcelas a partir de R$ 650 reais',
     },
     {
         image: IMAGE.CARRO.src,
@@ -40,7 +40,7 @@ const cards = [
         title: 'Consórcio de Imóveis',
         taxa: 'Taxa adm: a partir de 0,10% a.m.',
         credito: 'Crédito de R$ 100 mil a R$ 2 milhões',
-        parcela: 'Parcelas a partir de 550 reais',
+        parcela: 'Parcelas a partir de R$ 590 reais',
     },
 ];
 

@@ -45,22 +45,19 @@ const About = () => (
                     Quem somos
                 </h2>
                 <p className={S.subtitle}>
-                    Fundada em 2018 e sediada em Piracicaba-SP, a Prospéritté Consult nasceu com uma missão clara:
+                    Fundada em 2018 e sediada em Piracicaba-SP, a <strong>Prospéritté Consult</strong> nasceu com uma missão clara:
                     transformar o potencial de crescimento patrimonial em realidade acessível para nossos clientes.
-                    Com mais de 10 anos de experiência dos sócios no mercado de consórcios e seguros, desenvolvemos
+                    Com mais de <strong>10 anos de experiência</strong> dos sócios no mercado de consórcios e seguros, desenvolvemos
                     uma abordagem consultiva que vai além da simples venda de produtos financeiros.<br /><br />
 
                     Atuamos em todo o território nacional, oferecendo soluções inteligentes para aquisição e investimento
-                    em imóveis, veículos e outros bens. Trabalhamos com as maiores administradoras do país – HS Consórcios,
-                    Âncora, Embracon e Rodobens – mas nosso verdadeiro diferencial está na consultoria estratégica que
-                    antecede qualquer recomendação.<br /><br />
+                    em imóveis, veículos e outros bens. Trabalhamos com as maiores administradoras do país –
+                    <strong>HS Consórcios, Âncora, Embracon e Rodobens</strong> – mas nosso verdadeiro diferencial está na
+                    consultoria estratégica que antecede qualquer recomendação.<br /><br />
 
                     Nossa especialidade é a alavancagem patrimonial inteligente. Através de estratégias estruturadas, ajudamos
-                    investidores a acelerar o crescimento do patrimônio, como no Prospéritté 7.0, nosso programa exclusivo
-                    de investimento imobiliário.<br /><br />
-
-                    Acreditamos que decisões financeiras devem ser tomadas com planejamento e análise. Por isso, cada cliente
-                    recebe um atendimento personalizado, que transforma complexidade em clareza e oportunidades em resultados.
+                    investidores a acelerar o crescimento do patrimônio, como no <strong>Prospéritté 7.0</strong>, nosso programa exclusivo
+                    de investimento imobiliário.
                 </p>
             </div>
             <div className={S.right}>
@@ -74,7 +71,6 @@ const About = () => (
                 <div className={S.testimonialCard} key={idx}>
                     <div className={S.cardImageWrapper}>
                         <img src={t.image.src} alt={t.city} className={S.cardImage} />
-                        <div className={S.overlayPlay}><PlayIcon /></div>
                     </div>
                     <div className={S.cardInfo}>
                         <span className={S.city}>{t.city}</span>

@@ -19,7 +19,7 @@ export const MENU: NavbarItemProps[] = [
   },
   {
     label: 'Contato',
-    link: '#contato',
+    link: '/#contato',
   },
   {
     label: 'Blog',
