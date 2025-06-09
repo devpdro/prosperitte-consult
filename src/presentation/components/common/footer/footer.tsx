@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { IMAGE } from 'src/presentation/assets';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import styles from "./footer.module.scss";
