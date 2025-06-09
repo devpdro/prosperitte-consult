@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form'
 import InputMask from 'react-input-mask'
+import { useState } from 'react'
 
 import { Button } from 'src/presentation/components'
 
@@ -14,12 +15,23 @@ type LoanRequestProps = {
   cpf: string
   tipoSolicitacao: string
   termos: boolean
+  valor: string
+}
+
+const formatCurrency = (value: string) => {
+  const numericValue = value.replace(/\D/g, '')
+  const floatValue = (parseInt(numericValue || '0', 10) / 100).toFixed(2)
+  const formatted = floatValue
+    .replace('.', ',')
+    .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+  return `R$ ${formatted}`
 }
 
 const LoanRequest = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     formState: { errors, isSubmitting },
   } = useForm<LoanRequestProps>({
@@ -28,28 +40,33 @@ const LoanRequest = () => {
       email: '',
       whatsapp: '',
       cpf: '',
+      valor: '',
     },
   })
 
+  const [valorFormatado, setValorFormatado] = useState('')
+
   const onSubmit = () => {
-    const phone = '5519993273002';
+    const phone = '5519982435337'
     const msg = encodeURIComponent(
       'Olá! Tenho interesse em simular um consórcio e gostaria de receber mais informações. Pode me ajudar a conquistar meu objetivo?'
-    );
-    window.open(`https://wa.me/${phone}?text=${msg}`);
-    reset();
+    )
+    window.open(`https://wa.me/${phone}?text=${msg}`)
+    reset()
+    setValorFormatado('')
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={S.form}>
         <fieldset>
-          <legend className={S.title}>Simule o seu consórcio.
-            O momento é agora!
+          <legend className={S.title}>
+            Realize seu sonho com inteligência. <br />
+            Simule agora seu consórcio.
           </legend>
 
           <p className={S.paragraphSubtitle}>
-            Aproveite esse momento de menor competitividade e saia na frente. Garanta taxas mais atraentes, maior margem de negociação e aproveite a tendência por menores lances para contemplar.
+            Esse é o momento certo para tirar seus planos do papel. Com os financiamentos mais caros, o consórcio se destaca como a alternativa econômica e estratégica para conquistar o que você quer.
           </p>
 
           <select
@@ -62,35 +79,37 @@ const LoanRequest = () => {
             <option value="" disabled hidden>
               Que tipo de produto você busca?
             </option>
-            <option className={S['option']} value="Imóvel">
-              Imóvel
-            </option>
-            <option className={S['option']} value="Terreno">
-              Terreno
-            </option>
-            <option className={S['option']} value="Terreno e Construção">
-              Terreno e Construção
-            </option>
-            <option className={S['option']} value="Reforma">
-              Reforma
-            </option>
-            <option className={S['option']} value="Quitação de Financiamento">
-              Quitação de Financiamento
-            </option>
-            <option className={S['option']} value="Investimento">
-              Investimento
-            </option>
-            <option className={S['option']} value="Carro Novo">
-              Carro
-            </option>
-            <option className={S['option']} value="Caminhão">
-              Caminhão
-            </option>
-            <option className={S['option']} value="Moto">
-              Moto
-            </option>
+            <option className={S['option']} value="Imóvel">Imóvel</option>
+            <option className={S['option']} value="Terreno">Terreno</option>
+            <option className={S['option']} value="Terreno e Construção">Terreno e Construção</option>
+            <option className={S['option']} value="Reforma">Reforma</option>
+            <option className={S['option']} value="Quitação de Financiamento">Quitação de Financiamento</option>
+            <option className={S['option']} value="Investimento">Investimento</option>
+            <option className={S['option']} value="Carro Novo">Carro</option>
+            <option className={S['option']} value="Caminhão">Caminhão</option>
+            <option className={S['option']} value="Moto">Moto</option>
           </select>
 
+          <InputMask
+            mask=""
+            inputMode="numeric"
+            placeholder="Digite o valor"
+            value={valorFormatado}
+            className={`${S['input-text']} ${errors.valor ? S['input-text-error'] : ''}`}
+            {...register('valor', {
+              required: 'Valor é obrigatório',
+              validate: (value) =>
+                Number(value) >= 80000 || 'O valor mínimo é R$ 80.000,00',
+              onChange: (e) => {
+                const raw = e.target.value
+                const formatted = formatCurrency(raw)
+                setValorFormatado(formatted)
+                const numericOnly = raw.replace(/\D/g, '')
+                setValue('valor', numericOnly)
+              },
+            })}
+          />
+          <span className={S.valueMin}>Valor mínimo: R$ 80.000,00</span>
 
           <input
             {...register('nome', {
@@ -114,7 +133,7 @@ const LoanRequest = () => {
               },
             })}
             className={`${S['input-text']} ${errors.email ? S['input-text-error'] : ''}`}
-            type="text"
+            type="email"
             placeholder="E-mail"
           />
 
@@ -134,7 +153,7 @@ const LoanRequest = () => {
             placeholder="Telefone (com DDD)"
           />
 
-          <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Simular agora' : 'Simular agora'} />
+          <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Simulando...' : 'Simular agora'} />
         </fieldset>
       </form>
     </div>

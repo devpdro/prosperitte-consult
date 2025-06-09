@@ -5,18 +5,19 @@
   @include display-flex;
   flex-direction: column;
 
-
   .title {
     text-align: center;
     color: $color-darkHigh;
     font-size: $font-medium;
     font-weight: 500;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 30px;
 
     @media (max-width: 994px) {
-      font-size: $font-default;
+      font-size: 18px;
+      line-height: 24px;
+
     }
   }
 
@@ -30,6 +31,18 @@
     margin-top: 0.6rem;
     color: #616161;
   }
+
+  .valueMin {
+    color: $color-darkHigh;
+    font-size: 11px;
+    line-height: 17px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0.4rem;
+    color: #616161;
+    text-align: left !important;
+  }
+
 
   .input-text {
     font-family: inherit;

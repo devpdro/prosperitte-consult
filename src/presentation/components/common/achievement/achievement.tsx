@@ -14,35 +14,37 @@ const cards = [
         image: IMAGE.CAMINHAO.src,
         icon: <IconTruck size={28} color="#100f30" />,
         title: 'Consórcio de Veículos Pesados',
-        taxa: 'Taxa de administração a partir de 0,14% a.m',
-        credito: 'Crédito de R$ 150 mil até R$ 700 mil',
-        parcela: 'Parcelas a partir de R$ 700,00 no Plano Flex',
+        taxa: 'Taxa adm: a partir de 0,14% a.m.',
+        credito: 'Crédito de R$ 500 mil a R$ 3 milhões',
+        parcela: 'Parcelas a partir de R$ 2.400 reais',
     },
     {
         image: IMAGE.CONSTRUCAO.src,
         icon: <IconTools size={28} color="#100f30" />,
         title: 'Consórcio para Reformar ou Construir',
-        taxa: 'Taxa de administração a partir de 0,10% a.m.',
-        credito: 'Crédito de R$ 80 mil até R$ 500 mil.',
-        parcela: 'Parcelas a partir de R$ 209,00 no Plano Flex.',
+        taxa: 'Taxa adm: a partir de 0,10% a.m.',
+        credito: 'Crédito de R$ 100 mil a R$ 1 milhão',
+        parcela: 'Parcelas a partir de 650 reais',
     },
     {
         image: IMAGE.CARRO.src,
         icon: <IconCar size={28} color="#100f30" />,
         title: 'Consórcio de Veículos',
-        taxa: 'Taxa de administração a partir de 0,14% a.m.',
-        credito: 'Crédito de R$ 20 mil até R$ 150 mil.',
-        parcela: 'Parcelas a partir de R$ 156,00 no Plano Flex.',
+        taxa: 'Taxa adm: a partir de 0,14% a.m.',
+        credito: 'Crédito de R$ 80 mil a R$ 800 mil',
+        parcela: 'Parcelas a partir de R$ 550 reais',
     },
     {
         image: IMAGE.CASA.src,
         icon: <IconHome size={28} color="#100f30" />,
         title: 'Consórcio de Imóveis',
-        taxa: 'Taxa de administração a partir de 0,10% a.m.',
-        credito: 'Crédito de R$ 80 mil até R$ 500 mil.',
-        parcela: 'Parcelas a partir de R$ 209,00 no Plano Flex.',
+        taxa: 'Taxa adm: a partir de 0,10% a.m.',
+        credito: 'Crédito de R$ 100 mil a R$ 2 milhões',
+        parcela: 'Parcelas a partir de 550 reais',
     },
-]
+];
+
+const ctaUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20da%20Prosp%C3%A9ritt%C3%A9%20Consult.';
 
 const Achievement = () => {
     return (
@@ -68,6 +70,16 @@ const Achievement = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className={S.ctaContainer}>
+                <a
+                    href={ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={S.ctaBtn}
+                >
+                    SIMULAR AGORA
+                </a>
             </div>
         </section>
     )

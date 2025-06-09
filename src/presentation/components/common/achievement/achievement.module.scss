@@ -45,7 +45,7 @@
   box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
   padding: 0;
   width: 290px;
-  min-height: 480px;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -116,6 +116,40 @@
   padding-top: 16px;
 }
 
+.ctaContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0 0 0;
+}
+
+.ctaText {
+  color: #757575;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ctaBtn {
+  background: #FACA5D;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  font-weight: 400;
+}
+
+.ctaBtn:hover {
+  background: #9a6609;
+}
+
 @media (max-width: 1200px) {
   .cardsContainer {
     gap: 20px;
@@ -156,6 +190,11 @@
     width: 100%;
     max-width: 100vw;
     min-height: 360px;
+  }
+
+  .ctaBtn {
+    padding: 10px 10vw;
+    font-size: 0.95rem;
   }
 
   .sectionTitle {

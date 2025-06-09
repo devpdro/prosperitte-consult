@@ -46,20 +46,16 @@ export default function Footer() {
           <h4>Fale com a gente</h4>
           <ul>
             <li>
-              Capitais e regiões metropolitanas<br />
-              <strong>+55 19 99327‑3002</strong>
+              Suporte Administrativo<br />
+              <strong>+55 19 99963-2067</strong>
             </li>
             <li>
-              Agnaldo Consórcio<br />
+              Diretor Comercial<br />
               <strong>+55 19 98243-5337</strong>
             </li>
             <li>
-              Edgar Nunes<br />
-              <strong>+55 19 98248-3244</strong>
-            </li>
-            <li>
-              Atendimento<br />
-              <strong>19 98244-6085</strong>
+              Gerente Comercial<br />
+              <strong>+55 19 98243-5337</strong>
             </li>
             <li>
               E-mail<br />

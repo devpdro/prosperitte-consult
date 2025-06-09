@@ -15,8 +15,8 @@ const LETTERS = [
     { credito: 'R$ 750.000,00', pagas: 5, parcela: 'R$ 4.890,00' }
 ];
 
-const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519993273002&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20tenho%20interesse%20em%20fazer%20um%20cons%C3%B3rcio!';
-const ctaUrl = 'https://api.whatsapp.com/send?phone=5519993273002&text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20da%20Prosp%C3%A9ritt%C3%A9%20Consult.';
+const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20tenho%20interesse%20em%20fazer%20um%20cons%C3%B3rcio!';
+const ctaUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20da%20Prosp%C3%A9ritt%C3%A9%20Consult.';
 
 export default function Letters() {
     const [, setIsMobile] = useState(false);
@@ -86,7 +86,7 @@ export default function Letters() {
             </div>
             <div className={styles.ctaContainer}>
                 <p className={styles.ctaText}>
-                    Não encontrou o crédito ideal? Fale com nossos consultores:
+                    Não encontrou o crédito ideal? Fale com nossos consultores <br /> A menos taxa com parcelas que cabem no seu bolso!
                 </p>
                 <a
                     href={ctaUrl}

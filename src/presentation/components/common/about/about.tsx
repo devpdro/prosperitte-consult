@@ -65,7 +65,7 @@ const About = () => (
             </div>
             <div className={S.right}>
                 <div className={S.mainCard}>
-                    <img className={S.mainImage} src={IMAGE.EMPRESA.src} alt='Empresa' />
+                    <img className={S.mainImage} src={IMAGE.EQUIPE.src} alt='Empresa' />
                 </div>
             </div>
         </div>

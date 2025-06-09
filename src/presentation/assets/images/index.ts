@@ -9,25 +9,27 @@ import ATENCAO_CLIENTE from './ATENCAO_CLIENTE.jpg'
 import EMPRESA from './EMPRESA.jpg'
 import SEGURANCA from './SEGURANCA.jpg'
 import TRANSPARENCIA from './TRANSPARENCIA.jpg'
-import ANCORA from './ANCORA.png'
+import ANCORA from './ANCORA.jpeg'
 import EMBRACON from './EMBRACON.webp'
 import HS from './HS.webp'
 import SANTANDER from './SANTANDER.webp'
-import RODOBENS from './RODOBENS.jpg'
+import RODOBENS from './RODOBENS.png'
 import HEADER from './HEADER.webp'
 import TENDENCIAS from './TENDENCIAS.jpg'
 import GOLPES from './GOLPES.jpg'
 import PLANEJAMENTO from './PLANEJAMENTO.jpg'
 import QUATRO_VEICULOS_NOVOS_HYNDAI from './4_VEICULOS_NOVOS_HYNDAI.webp'
 import IMPOSTO_COMPRA_CARRO from './IMPOSTO_COMPRA_CARRO.webp'
+import EQUIPE from './EQUIPE.jpg'
 
 const IMAGE = {
+  EQUIPE,
   QUATRO_VEICULOS_NOVOS_HYNDAI,
   IMPOSTO_COMPRA_CARRO,
   TENDENCIAS,
   PLANEJAMENTO,
   GOLPES,
-  HEADER, 
+  HEADER,
   ANCORA,
   EMBRACON,
   HS,
