@@ -24,8 +24,8 @@ export default function Warning() {
                             </div>
                             <h3 className={styles.cardTitle}>Poupança</h3>
                             <p className={styles.cardDescription}>
-                                <span className={styles.problemEmphasis}>"Segurança"</span> que está roubando seu futuro.
-                                Enquanto você "protege" seu dinheiro, ele derrete silenciosamente na sua conta.
+                                <span className={styles.problemEmphasis}>&ldquo;Segurança&rdquo;</span> que está roubando seu futuro.
+                                Enquanto você &ldquo;protege&rdquo; seu dinheiro, ele derrete silenciosamente na sua conta.
                             </p>
                             <div className={styles.cardBadge}>-8% ao ano real</div>
                         </div>
