@@ -1,33 +1,527 @@
-@import '../../../styles/themes/light.scss';
-@import '../../../styles/themes/mixins.scss';
+.warningSection {
+    width: 100%;
+    background: linear-gradient(135deg,
+            #090715 0%,
+            #090715 15%,
+            #090715 35%,
+            #090715 50%,
+            #090715 65%,
+            #090715 85%,
+            #090715 100%);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
 
 .container {
-  position: fixed;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  background-color: $color-snow;
-  top: 88px;
-  left: 0;
-  right: 0;
-  padding: 0rem 2rem;
-  z-index: 90;
-  .box-section {
-    @include container(1280px, 0 auto);
-    @include display-flex(center, space-between);
-    .title {
-      font-size: $font-small;
-      font-weight: $weight-default;
-      padding: 1.2rem 0;
-      line-height: 1.2rem;
-      padding-right: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.5px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.titleEmphasis {
+    color: #9831FB;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85em;
+    display: inline-block;
+}
+
+.titleHighlight {
+    color: #ef4444;
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #ef4444;
+        border-radius: 2px;
+        animation: slideIn 1s ease-out 0.5s both;
     }
-    .icon {
-      @include hover;
-      font-size: $font-default;
-      &:hover {
+}
+
+.subtitle {
+    color: #cbd5e1;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+
+    strong {
+        color: #ef4444;
+        font-weight: 600;
+    }
+}
+
+.callout {
+    display: block;
+    margin-top: 12px;
+    color: #9831FB;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 20px 0;
+    align-items: start;
+}
+
+.problemsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    .problemCard {
+        animation: fadeInUp 0.6s ease-out forwards;
+
+        &:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.7s;
+        }
+    }
+}
+
+.problemCard {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #ef4444;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(239, 68, 68, 0.15);
+        border-color: rgba(239, 68, 68, 0.3);
+
+        .cardIcon {
+            transform: scale(1.1);
+            color: #ef4444;
+        }
+    }
+}
+
+.cardIcon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    color: #ef4444;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+
+    .problemCard:hover & {
+        opacity: 1;
         transform: scale(1.1);
-      }
-      @media (max-width: 724px) {
-      }
     }
-  }
+}
+
+.cardTitle {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 16px 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.cardDescription {
+    color: #cbd5e1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0 0 20px 0;
+}
+
+.problemEmphasis {
+    color: #ef4444;
+    font-weight: 700;
+}
+
+.cardBadge {
+    display: inline-block;
+    background: #ef4444;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.solutionCard {
+    background: rgba(152, 49, 251, 0.1);
+    border: 2px solid rgba(152, 49, 251, 0.3);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    height: fit-content;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.9s both;
+    transition: all 0.3s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #9831FB;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        border-color: rgba(152, 49, 251, 0.6);
+        box-shadow: 0 15px 30px rgba(152, 49, 251, 0.2);
+    }
+}
+
+.solutionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.solutionIcon {
+    color: #10b981;
+    opacity: 0.9;
+}
+
+.solutionTitle {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.solutionDescription {
+    color: #e2e8f0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0 0 24px 0;
+
+    strong {
+        color: #ffffff;
+        font-weight: 600;
+    }
+}
+
+.solutionHighlight {
+    color: #9831FB;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.solutionBenefits {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #10b981;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding: 8px 16px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.gradientSwoosh {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160%;
+    height: 12px;
+    background: linear-gradient(90deg, #2a1f5c 0%, #6b46c1 25%, #8b5cf6 50%, #a855f7 75%, #ec4899 100%);
+    border-radius: 6px;
+    clip-path: path('M 0 6 Q 25% 12, 50% 3 Q 75% -3, 100% 6 L 100% 12 Q 75% 3, 50% 12 Q 25% 21, 0 12 Z');
+}
+
+@media (max-width: 1024px) {
+    .warningSection {
+        padding: 100px 20px;
+    }
+
+    .container {
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .cardsContainer {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .problemsGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .solutionBenefits {
+        gap: 16px;
+    }
+
+    .benefit {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .warningSection {
+        padding: 80px 16px;
+        min-height: 500px;
+    }
+
+    .container {
+        gap: 25px;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cardsContainer {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .problemsGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .problemCard {
+        padding: 24px 20px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cardDescription {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .solutionCard {
+        padding: 32px 24px;
+        max-width: 100%;
+    }
+
+    .solutionTitle {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .solutionDescription {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .solutionBenefits {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .benefit {
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .gradientSwoosh {
+        width: 140%;
+        height: 10px;
+        bottom: -16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .problemCard {
+        padding: 20px 16px;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .cardDescription {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .solutionCard {
+        padding: 24px 20px;
+        max-width: 100%;
+    }
+
+    .solutionTitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .solutionDescription {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .benefit {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }

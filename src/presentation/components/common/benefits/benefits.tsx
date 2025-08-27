@@ -1,64 +1,49 @@
-import {
-    IconShieldCheck,
-    IconPigMoney,
-    IconTrendingUp,
-    IconFileCertificate,
-    IconGift,
-    IconUsersGroup
-} from "@tabler/icons-react";
+import styles from './benefits.module.scss';
 
-import styles from "./benefits.module.scss";
-
-const BENEFITS = [
+const benefits = [
     {
-        icon: <IconShieldCheck size={36} stroke={1.7} />,
-        title: "Segurança e Credibilidade",
-        desc: "Empresa autorizada e fiscalizada pelo Banco Central. Seu dinheiro está 100% protegido.",
+        number: '01',
+        text: 'Participação direta de um profissionalizador de empresas com mais de 20 anos de experiência em empresas de grande, médio e pequeno porte, desde nacionais a grandes multinacionais de renome, em mais de 5 países diferentes;'
     },
     {
-        icon: <IconPigMoney size={36} stroke={1.7} />,
-        title: "Sem Juros, Sem Entrada",
-        desc: "Planeje seu futuro sem pagar juros abusivos. Aqui, você investe no que é seu.",
+        number: '02',
+        text: 'Acompanhamento da execução com time de especialistas;'
     },
     {
-        icon: <IconTrendingUp size={36} stroke={1.7} />,
-        title: "Planos Flexíveis",
-        desc: "Diversas opções de créditos, parcelas que cabem no seu bolso e prazos sob medida.",
+        number: '03',
+        text: 'Implementação de metas e indicadores utilizados e validados por médias e grandes empresas;'
     },
     {
-        icon: <IconFileCertificate size={36} stroke={1.7} />,
-        title: "Atendimento Especializado",
-        desc: "Consultores prontos para te ajudar a escolher o melhor plano, de forma transparente e humanizada.",
-    },
-    {
-        icon: <IconGift size={36} stroke={1.7} />,
-        title: "Contemplação Acelerada",
-        desc: "Aumente suas chances com lances livres, lances fixos e sorteios mensais.",
-    },
-    {
-        icon: <IconUsersGroup size={36} stroke={1.7} />,
-        title: "Sem Burocracia",
-        desc: "Faça tudo 100% online, com agilidade na contratação e acompanhamento da sua cota.",
-    },
+        number: '04',
+        text: 'Diagnóstico completo para atualizar todas as áreas da sua empresa com o que há de melhor no mercado.'
+    }
 ];
 
-const Benefits = () => {
+export default function Benefits() {
     return (
-        <section id="beneficios" className={styles.section}>
-            <h2 className={styles.title}>
-                Por que fazer consórcio com a <span style={{ color: "#100f30" }}>Prospéritté</span><span style={{ color: "#100f30", fontStyle: "italic" }}> Consult?</span>
-            </h2>
-            <div className={styles.grid}>
-                {BENEFITS.map((b, i) => (
-                    <div className={styles.card} key={i}>
-                        <div className={styles.icon}>{b.icon}</div>
-                        <div className={styles.cardTitle}>{b.title}</div>
-                        <div className={styles.cardDesc}>{b.desc}</div>
-                    </div>
-                ))}
+        <section className={styles.benefitsSection}>
+            <div className={styles.container}>
+                <h2 className={styles.mainTitle}>
+                    NO NEXUM CLUBE, VOCÊ TERÁ ACESSO...
+                </h2>
+
+                <div className={styles.cardsGrid}>
+                    {benefits.map((benefit, index) => (
+                        <div className={styles.card} key={index}>
+                            <div className={styles.numberBadge}>
+                                {benefit.number}
+                            </div>
+                            <p className={styles.cardText}>
+                                {benefit.text}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+                <button className={styles.ctaButton}>
+                    SAIBA MAIS
+                </button>
             </div>
         </section>
     );
-};
-
-export default Benefits;
+}

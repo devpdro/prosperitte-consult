@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import "src/presentation/styles/global.scss";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Prospéritté Consult | Consórcio digital que cabe no seu plano de vida",
+  title: "Prospéritté Consult ",
   description: "Realize seus sonhos com a Prospéritté Consult, especialista em consórcios. Simule seu consórcio de forma rápida, segura e sem burocracia. Planeje seu futuro com as melhores condições do mercado!",
   keywords: [
     "consórcio",
@@ -35,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

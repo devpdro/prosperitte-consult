@@ -1,88 +1,169 @@
-import { IMAGE } from 'src/presentation/assets'
+import { IconChartBar, IconTrendingUp, IconHome, IconCalculator, IconTarget, IconStar, IconCrown } from '@tabler/icons-react';
+import styles from './achievement.module.scss';
 
-import {
-    IconHome,
-    IconCar,
-    IconTools,
-    IconTruck
-} from '@tabler/icons-react'
+const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es!';
 
-import S from './achievement.module.scss'
-
-const cards = [
+const strategySteps = [
     {
-        image: IMAGE.CAMINHAO.src,
-        icon: <IconTruck size={28} color="#100f30" />,
-        title: 'Consórcio de Veículos Pesados',
-        taxa: 'Taxa adm: a partir de 0,14% a.m.',
-        credito: 'Crédito de R$ 500 mil a R$ 3 milhões',
-        parcela: 'Parcelas a partir de R$ 1.850 reais',
+        icon: <IconChartBar size={32} stroke={2} />,
+        title: 'Investiu R$ 500 mil em FIIs',
+        description: 'Gerando ~R$ 5.000/mês em dividendos',
+        color: '#10b981',
+        gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
     },
     {
-        image: IMAGE.CONSTRUCAO.src,
-        icon: <IconTools size={28} color="#100f30" />,
-        title: 'Consórcio para Reformar ou Construir',
-        taxa: 'Taxa adm: a partir de 0,10% a.m.',
-        credito: 'Crédito de R$ 100 mil a R$ 1 milhão',
-        parcela: 'Parcelas a partir de R$ 650 reais',
+        icon: <IconHome size={32} stroke={2} />,
+        title: 'Assumiu 5 cartas de consórcio',
+        description: 'R$ 300 mil cada (R$ 1,5 milhão de crédito)',
+        color: '#8503FE',
+        gradient: 'linear-gradient(135deg, #8503FE 0%, #8b5cf6 100%)'
     },
     {
-        image: IMAGE.CARRO.src,
-        icon: <IconCar size={28} color="#100f30" />,
-        title: 'Consórcio de Veículos',
-        taxa: 'Taxa adm: a partir de 0,14% a.m.',
-        credito: 'Crédito de R$ 80 mil a R$ 800 mil',
-        parcela: 'Parcelas a partir de R$ 550 reais',
-    },
-    {
-        image: IMAGE.CASA.src,
-        icon: <IconHome size={28} color="#100f30" />,
-        title: 'Consórcio de Imóveis',
-        taxa: 'Taxa adm: a partir de 0,10% a.m.',
-        credito: 'Crédito de R$ 100 mil a R$ 2 milhões',
-        parcela: 'Parcelas a partir de R$ 590 reais',
-    },
+        icon: <IconTrendingUp size={32} stroke={2} />,
+        title: 'Compra para locação',
+        description: 'O aluguel quita as parcelas automaticamente',
+        color: '#f59e0b',
+        gradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'
+    }
 ];
 
-const ctaUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20da%20Prosp%C3%A9ritt%C3%A9%20Consult.';
+const results = [
+    {
+        number: 'R$ 1,5',
+        unit: 'milhão',
+        title: 'em imóveis quitados',
+        icon: <IconHome size={24} stroke={2} />,
+        color: '#10b981'
+    },
+    {
+        number: 'R$ 10',
+        unit: 'mil/mês',
+        title: 'de renda passiva',
+        icon: <IconTrendingUp size={24} stroke={2} />,
+        color: '#8503FE'
+    },
+    {
+        number: 'R$ 500',
+        unit: 'mil',
+        title: 'iniciais seguem investidos',
+        icon: <IconTarget size={24} stroke={2} />,
+        color: '#f59e0b'
+    }
+];
 
-const Achievement = () => {
+export default function Achievement() {
     return (
-        <section id='consorcio' className={S.achievementSection}>
-            <h2 className={S.sectionTitle}>Encontre o consórcio ideal para você</h2>
-            <p className={S.sectionSubtitle}>
-                Conheça os tipos de consórcio que oferecemos e conquiste seus objetivos:
-            </p>
-            <div className={S.cardsContainer}>
-                {cards.map((card, idx) => (
-                    <div className={S.card} key={idx}>
-                        <div className={S.cardImage}>
-                            <img src={card.image} alt={card.title} />
+        <section className={styles.achievementSection}>
+            <div className={styles.container}>
+                {/* Hero Section */}
+                <div className={styles.heroSection}>
+                    <div className={styles.heroBadge}>
+                        <IconCrown size={20} stroke={2} />
+                        <span>ESTUDO DE CASO REAL</span>
+                    </div>
+                    <h2 className={styles.heroTitle}>
+                        O Poder da <span className={styles.highlight}>Alavancagem Inteligente</span>
+                    </h2>
+                    <p className={styles.heroSubtitle}>
+                        Veja como Carlos transformou R$ 500 mil em um império imobiliário
+                    </p>
+                </div>
+
+                {/* Main Content */}
+                <div className={styles.mainContent}>
+                    {/* Person Profile */}
+                    <div className={styles.personProfile}>
+                        <div className={styles.personAvatar}>
+                            <div className={styles.avatarRing}>
+                                <IconTarget size={40} stroke={2} />
+                            </div>
+                            <div className={styles.statusBadge}>
+                                <IconStar size={12} stroke={2} />
+                                <span>SUCESSO</span>
+                            </div>
                         </div>
-                        <div className={S.cardContent}>
-                            <div className={S.cardIcon}>{card.icon}</div>
-                            <div className={S.cardTitle}>{card.title}</div>
-                            <ul className={S.cardList}>
-                                <li>{card.taxa}</li>
-                                <li>{card.credito}</li>
-                                <li>{card.parcela}</li>
-                            </ul>
+                        <div className={styles.personInfo}>
+                            <h3 className={styles.personName}>Carlos Silva</h3>
+                            <p className={styles.personAge}>39 anos • Empresário</p>
+                            <p className={styles.personContext}>
+                                Ia comprar uma casa à vista por R$ 500 mil. Com a estratégia certa, ele:
+                            </p>
                         </div>
                     </div>
-                ))}
-            </div>
-            <div className={S.ctaContainer}>
-                <a
-                    href={ctaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={S.ctaBtn}
-                >
-                    SIMULAR AGORA
-                </a>
+
+                    {/* Strategy Timeline */}
+                    <div className={styles.strategyTimeline}>
+                        <div className={styles.timelineHeader}>
+                            <h3 className={styles.timelineTitle}>Estratégia em 3 Passos</h3>
+                            <div className={styles.timelineProgress}>
+                                <div className={styles.progressBar}>
+                                    <div className={styles.progressFill}></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={styles.timelineSteps}>
+                            {strategySteps.map((step, index) => (
+                                <div className={styles.timelineStep} key={index}>
+                                    <div className={styles.stepConnector}>
+                                        <div className={styles.stepDot} style={{ background: step.gradient }}></div>
+                                        {index < strategySteps.length - 1 && (
+                                            <div className={styles.stepLine} style={{ background: step.gradient }}></div>
+                                        )}
+                                    </div>
+                                    <div className={styles.stepContent}>
+                                        <div className={styles.stepIcon} style={{ color: step.color }}>
+                                            {step.icon}
+                                        </div>
+                                        <div className={styles.stepText}>
+                                            <h4 className={styles.stepTitle}>{step.title}</h4>
+                                            <p className={styles.stepDescription}>{step.description}</p>
+                                        </div>
+                                        <div className={styles.stepNumber}>{index + 1}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Results Showcase */}
+                    <div className={styles.resultsShowcase}>
+                        <div className={styles.resultsHeader}>
+                            <h3 className={styles.resultsTitle}>
+                                Resultados em <span className={styles.timeHighlight}>15 anos</span>
+                            </h3>
+                            <div className={styles.resultsSubtitle}>
+                                Transformação patrimonial completa
+                            </div>
+                        </div>
+
+                        <div className={styles.resultsGrid}>
+                            {results.map((result, index) => (
+                                <div className={styles.resultCard} key={index}>
+                                    <div className={styles.resultIcon} style={{ color: result.color }}>
+                                        {result.icon}
+                                    </div>
+                                    <div className={styles.resultContent}>
+                                        <div className={styles.resultNumber}>
+                                            <span className={styles.number}>{result.number}</span>
+                                            <span className={styles.unit}>{result.unit}</span>
+                                        </div>
+                                        <p className={styles.resultTitle}>{result.title}</p>
+                                    </div>
+                                    <div className={styles.resultGlow} style={{ background: result.color }}></div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className={styles.resultsCta}>
+                            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
+                                AGENDAR CONSULTORIA GRATUITA
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
-    )
+    );
 }
-
-export default Achievement

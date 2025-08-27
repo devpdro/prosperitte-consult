@@ -1,77 +1,94 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
+import { IconChevronDown, IconQuestionMark } from '@tabler/icons-react'
+import styles from './faq.module.scss'
 
-import { FiPlus, FiX } from "react-icons/fi";
+const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es!'
 
-import styles from "./faq.module.scss";
-
-const QUESTIONS = [
+const faqData = [
     {
-        question: "Consórcio é seguro?",
-        answer: `Sim! O consórcio é regulamentado pelo Banco Central, e as administradoras são fiscalizadas rigorosamente. O dinheiro dos participantes é protegido por regras específicas e transparência total.`,
+        question: "Consórcio demora?",
+        answer: "Depende da estratégia de contemplação: sorteio, lance livre, lances fixos por fidelidade (6, 12, 18 meses) e compra de carta já contemplada. Nós desenhamos o caminho mais adequado ao seu perfil e horizonte."
     },
     {
-        question: "Preciso dar entrada para participar do consórcio?",
-        answer: `Não! No consórcio, você não precisa dar entrada. Basta escolher o valor da sua carta de crédito e começar a pagar as parcelas mensais.`,
+        question: "Preciso dar uma grande entrada?",
+        answer: "Trabalhamos com entradas inteligentes (~20%) e, em muitos casos, meia parcela até a contemplação."
     },
     {
-        question: "Quando vou receber meu bem?",
-        answer: `Você pode ser contemplado por sorteio ou dando um lance nas assembleias mensais. Todos os participantes têm chances iguais de serem sorteados, e quem oferece o maior lance também pode ser contemplado.`,
+        question: "E se o aluguel não cobrir a parcela?",
+        answer: "Selecionamos regiões e tipologias com yield compatível. Em cenários conservadores, usamos buffer (FIIs, reserva e ajuste de timing) para manter a segurança do fluxo."
     },
     {
-        question: "O valor das parcelas pode mudar?",
-        answer: `Sim, as parcelas podem ser ajustadas conforme a variação do preço do bem ou serviço, garantindo que o valor da sua carta de crédito seja sempre suficiente para a compra.`,
+        question: "Quais os custos?",
+        answer: "Taxa de administração do consórcio (varia por administradora), eventuais seguros e custos cartoriais/ITBI na compra. Tudo é simulado e previsto no plano."
     },
     {
-        question: "E se eu desistir do consórcio?",
-        answer: `Você pode sair do grupo a qualquer momento. O valor pago será devolvido conforme as regras do contrato, geralmente após o encerramento do grupo ou por sorteio de desistentes.`,
-    },
-    {
-        question: "Quais as vantagens do consórcio em relação ao financiamento?",
-        answer: `O consórcio não tem juros, apenas uma taxa de administração, o que torna as parcelas mais acessíveis. Além disso, você pode planejar a compra do seu bem sem comprometer seu orçamento.`,
-    },
+        question: "E os riscos?",
+        answer: "Não trabalhamos com promessas de ganho garantido. Nosso foco é estrutura, seleção de ativos e gestão de risco. Exemplos são ilustrativos e podem variar."
+    }
 ];
 
 export default function FAQ() {
-    const [open, setOpen] = useState<number | null>(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    const toggleFAQ = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
     return (
-        <section id="perguntas-frequentes" className={styles.faqSection}>
-            <div className={styles.contentWrapper}>
-                <div className={styles.left}>
-                    <h2 className={styles.title}>Ficou com alguma dúvida?</h2>
+        <section className={styles.faqSection}>
+            <div className={styles.container}>
+                {/* Header */}
+                <div className={styles.header}>
+                    <h2 className={styles.title}>
+                        Perguntas Frequentes
+                    </h2>
                     <p className={styles.subtitle}>
-                        Tire suas dúvidas e descubra por que o consórcio é uma alternativa segura, flexível e econômica para conquistar seus objetivos.
+                        Tire suas dúvidas sobre consórcios e alavancagem patrimonial
                     </p>
                 </div>
-                <div className={styles.right}>
-                    {QUESTIONS.map((q, i) => (
+
+                {/* FAQ Items */}
+                <div className={styles.faqContainer}>
+                    {faqData.map((item, index) => (
                         <div
-                            className={`${styles.card} ${open === i ? styles.open : ""}`}
-                            key={i}
-                            onClick={() => setOpen(open === i ? null : i)}
+                            key={index}
+                            className={`${styles.faqItem} ${openIndex === index ? styles.active : ''}`}
                         >
-                            <div className={styles.cardHeader}>
-                                <span className={styles.question}>{q.question}</span>
-                                {open === i ? (
-                                    <FiX className={styles.icon} />
-                                ) : (
-                                    <FiPlus className={styles.icon} />
-                                )}
-                            </div>
-                            <div
-                                className={styles.answer}
-                                style={{
-                                    maxHeight: open === i ? "500px" : "0",
-                                    opacity: open === i ? 1 : 0,
-                                    paddingTop: open === i ? "20px" : "0",
-                                }}
+                            <button
+                                className={styles.faqQuestion}
+                                onClick={() => toggleFAQ(index)}
+                                aria-expanded={openIndex === index}
                             >
-                                {q.answer}
+                                <span className={styles.questionText}>{item.question}</span>
+                                <div className={styles.chevronIcon}>
+                                    <IconChevronDown size={24} stroke={2} />
+                                </div>
+                            </button>
+
+                            <div className={styles.faqAnswer}>
+                                <div className={styles.answerContent}>
+                                    <p>{item.answer}</p>
+                                </div>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* CTA Section */}
+                <div className={styles.ctaSection}>
+                    <div className={styles.ctaContent}>
+                        <h3 className={styles.ctaTitle}>
+                            Ainda tem dúvidas?
+                        </h3>
+                        <p className={styles.ctaSubtitle}>
+                            Nossa equipe está pronta para te ajudar
+                        </p>
+                    </div>
+                    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
+                        FALAR COM ESPECIALISTA
+                    </a>
                 </div>
             </div>
         </section>

@@ -1,184 +1,256 @@
-@import '../../../styles/themes/light.scss';
-@import '../../../styles/themes/mixins.scss';
-
 .pathSection {
-    @include container(1380px);
     width: 100%;
-    background: #fff;
-    padding: 48px 1rem 48px 1rem;
+    background: #D7DFEA;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.titleColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .title {
-    font-size: 2rem;
-    font-weight: 400;
-    color: $color-primary;
-    margin-bottom: 36px;
-    text-align: left;
-    margin-left: 4vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
-.bold {
-    font-weight: 700;
-    font-size: 2rem;
-    color: $color-primary;
+.titleLine1 {
+    color: #1e293b;
+    font-size: 36px;
+    margin-bottom: 6px;
 }
 
-.stepsWrapper {
+.titleLine2 {
+    color: #9831FB;
+    font-size: 40px;
+}
+
+.contentColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     position: relative;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2vw;
 }
 
-.line {
+.contentColumn::before {
+    content: '';
     position: absolute;
-    top: 38px;
     left: 0;
-    right: 0;
-    height: 2px;
-    background: #e6e6e6;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #9831FB;
     z-index: 1;
 }
 
-.lineProgress {
-    position: absolute;
-    top: 38px;
-    left: 0;
-    height: 2px;
-    background: $color-secondary;
-    z-index: 2;
-    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 2px;
-    pointer-events: none;
-}
-
-.steps {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0;
+.contentSection {
     position: relative;
-    z-index: 2;
+    padding-left: 24px;
 }
 
-.step {
-    flex: 1 1 0;
+.sectionHeader {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    min-width: 180px;
-    max-width: 320px;
-    position: relative;
+    margin-bottom: 24px;
 }
 
-.circle {
-    width: 48px;
-    height: 48px;
-    background: $color-secondary;
-    color: #0a2a32;
-    border-radius: 50%;
+.verticalLine {
+    width: 2px;
+    height: 24px;
+    background: #9831FB;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.contentTitle {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.listContainer {
+    position: relative;
+    padding-left: 0;
+}
+
+.listItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.itemNumber {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 18px;
+    width: 36px;
+    height: 36px;
+    background: #9831FB;
+    color: white;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    flex-shrink: 0;
     margin-top: 0;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
-    border: 2px solid #e6e6e6;
-    z-index: 2;
 }
 
-.stepText {
-    font-size: 1.1rem;
-    color: $color-primary;
-    text-align: center;
+.itemText {
+    color: #1e293b;
+    font-size: 18px;
     font-weight: 400;
-    margin-bottom: 0;
-    min-height: 48px;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding-top: 4px;
 }
 
-.stepTextFinal {
-    font-size: 1.15rem;
-    color: $color-primary;
-    text-align: left;
-    font-weight: 500;
-    margin-left: 12px;
-    min-width: 220px;
-    margin-top: 8px;
-}
-
-@media (max-width: 1100px) {
-    .title {
-        font-size: 2rem;
-        margin-left: 2vw;
-    }
-
-    .bold {
-        font-size: 2.2rem;
-    }
-
-    .steps {
-        flex-wrap: wrap;
-    }
-
-    .step {
-        min-width: 140px;
-        max-width: 220px;
-    }
-
-    .stepTextFinal {
-        min-width: 120px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
     .pathSection {
-        padding: 24px 1rem 16px 1rem;
+        padding: 60px 20px;
     }
 
-    .title {
-        font-size: 1.2rem;
-        margin-left: 2vw;
+    .content {
+        gap: 60px;
     }
 
-    .bold {
-        font-size: 1.3rem;
+    .titleLine1,
+    .titleLine2 {
+        font-size: 36px;
     }
 
-    .steps {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
+    .contentTitle {
+        font-size: 22px;
     }
 
-    .line {
-        display: none;
+    .itemText {
+        font-size: 17px;
     }
 
-    .lineProgress {
-        display: none;
+    .itemNumber {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pathSection {
+        padding: 40px 16px;
     }
 
-    .step {
-        flex-direction: row;
-        align-items: center;
-        min-width: 0;
-        max-width: 100vw;
-        margin-bottom: 0;
+    .content {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .circle {
-        margin-bottom: 0;
+    .titleColumn {
+        text-align: center;
+    }
+
+    .titleLine1,
+    .titleLine2 {
+        font-size: 30px;
+    }
+
+    .contentTitle {
+        font-size: 20px;
+    }
+
+    .sectionHeader {
+        margin-bottom: 20px;
+    }
+
+    .verticalLine {
+        height: 20px;
         margin-right: 12px;
     }
 
-    .stepText,
-    .stepTextFinal {
-        min-width: 0;
-        margin-left: 0;
-        text-align: left;
+    .listItem {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .itemNumber {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .itemText {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pathSection {
+        padding: 30px 16px;
+    }
+
+    .content {
+        gap: 30px;
+    }
+
+    .titleLine1,
+    .titleLine2 {
+        font-size: 26px;
+    }
+
+    .contentTitle {
+        font-size: 18px;
+    }
+
+    .sectionHeader {
+        margin-bottom: 16px;
+    }
+
+    .verticalLine {
+        height: 18px;
+        margin-right: 10px;
+    }
+
+    .listItem {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .itemNumber {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .itemText {
+        font-size: 15px;
     }
 }

@@ -1,252 +1,545 @@
 .lettersSection {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 38px 2rem 0 2rem !important;
+    background: linear-gradient(135deg,
+            #090715 0%,
+            #090715 15%,
+            #090715 35%,
+            #090715 50%,
+            #090715 65%,
+            #090715 85%,
+            #090715 100%);
+    padding: 120px 20px;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.title {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #100f30;
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.header {
     text-align: center;
-    margin-bottom: 16px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.mainTitle {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    text-align: center;
+    line-height: 1.1;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.5px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: #9831FB;
+        border-radius: 2px;
+    }
 }
 
 .subtitle {
-    color: #757575;
-    font-size: 1.2rem;
+    color: #cbd5e1;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
     text-align: center;
-    max-width: 800px;
-    margin-bottom: 48px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.tableWrapper {
-    width: 100%;
-    overflow-x: auto;
+.consultationSection {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
 }
 
-.lettersTable {
-    width: 100%;
-    background: transparent;
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.lettersTable th {
-    background: #100f30;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 18px 0;
-    text-align: center;
-    border: none;
+.stepCard {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px 24px;
+    position: relative;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #9831FB;
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: rgba(133, 3, 254, 0.3);
+    }
 }
 
-.lettersTable th:first-child {
-    border-top-left-radius: 10px;
+.stepIcon {
+    color: #9831FB;
+    margin-bottom: 16px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+
+    .stepCard:hover & {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
-.lettersTable th:last-child {
-    border-top-right-radius: 10px;
-
+.stepContent {
+    flex: 1;
 }
 
-.lettersTable tr {
-    background: #100f30;
-    margin-top: 10px;
-
-}
-
-.lettersTable tbody tr:not(:last-child) {
-    border-bottom: 2px solid #fff;
-}
-
-.lettersTable td {
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 14px 0;
-    border: none;
-    background: transparent;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.lettersTable tr td:last-child {
-    text-align: center;
-    padding-right: 0;
-}
-
-.whatsappBtn {
-    background: #FACA5D;
-    color: #fff;
+.stepTitle {
+    color: #ffffff;
+    font-size: 20px;
     font-weight: 600;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 24px;
-    padding: 10px 28px;
-    font-size: 13px;
-    line-height: 16px;
-    cursor: pointer;
-    transition: background 0.2s;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: none;
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.2px;
 }
 
-.whatsappBtn:hover {
-    background: #9a6609;
+.stepDescription {
+    color: #cbd5e1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
 }
 
-.ctaContainer {
-    width: 100%;
+.stepNumber {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    background: #9831FB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.ctaSection {
+    background: rgba(152, 49, 251, 0.1);
+    border: 2px solid rgba(152, 49, 251, 0.3);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #9831FB;
+    }
+}
+
+.ctaContent {
+    margin-bottom: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 48px 0 0 0;
+    gap: 16px;
 }
 
-.ctaText {
-    color: #757575;
-    font-size: 1.1rem;
+.ctaIcon {
+    color: #10b981;
+    opacity: 0.9;
+}
+
+.ctaTitle {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     text-align: center;
-    margin-bottom: 24px;
+    letter-spacing: -0.3px;
 }
 
-.ctaBtn {
-    background: #FACA5D;
-    color: #fff;
+.ctaSubtitle {
+    color: #e2e8f0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
+    text-align: center;
+    max-width: 480px;
+}
+
+.ctaButton {
+    background: #9831FB;
+    color: #ffffff;
     border: none;
-    border-radius: 32px;
-    padding: 16px 48px;
-    font-size: 1.2rem;
+    border-radius: 12px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(152, 49, 251, 0.3);
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     text-decoration: none;
     display: inline-block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(152, 49, 251, 0.4);
+        background: #8a2be2;
+    }
+}
+
+.raizSection {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.raizHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.raizHeaderIcon {
+    color: #9831FB;
+    opacity: 0.9;
+}
+
+.raizTitle {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.3px;
+}
+
+.raizSubtitle {
+    color: #cbd5e1;
+    font-size: 18px;
+    text-align: center;
     font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
+    max-width: 560px;
 }
 
-.ctaBtn:hover {
-    background: #9a6609;
+.raizGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
 }
 
-.rowEven {
-    background: #100f30;
+.raizCard {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        border-color: rgba(133, 3, 254, 0.2);
+    }
 }
 
-.rowOdd {
-    background: #100f30;
+.raizLetter {
+    width: 48px;
+    height: 48px;
+    background: #9831FB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    flex-shrink: 0;
 }
 
-@media (max-width: 900px) {
+.raizContent {
+    flex: 1;
+}
+
+.raizCardTitle {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 6px 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.raizCardDescription {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
     .lettersSection {
-        padding: 32px 4px 0 4px;
+        padding: 100px 20px;
     }
 
-    .title {
-        font-size: 2.2rem;
+    .container {
+        gap: 60px;
+    }
+
+    .mainTitle {
+        font-size: 44px;
+        line-height: 52px;
     }
 
     .subtitle {
-        font-size: 1rem;
+        font-size: 20px;
+        line-height: 28px;
     }
 
-    .lettersTable th,
-    .lettersTable td {
-        font-size: 1rem;
-        padding: 10px 0;
+    .stepTitle {
+        font-size: 20px;
+        line-height: 28px;
     }
 
-    .ctaBtn {
-        padding: 12px 24px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .lettersSection {
-        padding: 16px 0 0 0;
+    .stepDescription {
+        font-size: 16px;
+        line-height: 24px;
     }
 
-    .title {
-        font-size: 1.4rem;
+    .ctaTitle {
+        font-size: 28px;
+        line-height: 36px;
     }
 
-    .subtitle {
-        font-size: 0.95rem;
+    .ctaSubtitle {
+        font-size: 18px;
+        line-height: 26px;
     }
 
-    .lettersTable th,
-    .lettersTable td {
-        font-size: 0.95rem;
-        padding: 7px 0;
+    .raizTitle {
+        font-size: 32px;
+        line-height: 40px;
     }
 
-    .whatsappBtn {
-        padding: 7px 12px;
-        font-size: 0.95rem;
+    .raizSubtitle {
+        font-size: 18px;
+        line-height: 26px;
     }
 
-    .ctaBtn {
-        padding: 10px 10vw;
-        font-size: 0.95rem;
-    }
-
-    .ctaText {
-        font-size: 0.95rem;
-    }
-
-    .tableWrapper {
-        display: none;
-    }
-
-    .mobileCards {
-        display: flex;
-        flex-direction: column;
+    .stepsGrid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        width: 100%;
     }
 
-    .mobileCard {
-        background: #100f30;
-        border-radius: 12px;
-        padding: 32px 12px 24px 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        box-shadow: 0 2px 8px 0 rgba(44, 41, 74, 0.08);
-    }
-
-    .mobileCardInfo {
-        color: #fff;
-        font-size: 1.1rem;
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 18px;
-        font-weight: 500;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .whatsappBtn {
-        margin: 0 auto;
-    }
-
-    .mobileCard.rowEven {
-        background: #6336c7;
-    }
-
-    .mobileCard.rowOdd {
-        background: #6d3fd1;
+    .raizGrid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
     }
 }
 
-@media (min-width: 601px) {
-    .mobileCards {
-        display: none !important;
+@media (max-width: 768px) {
+    .lettersSection {
+        padding: 80px 16px;
+    }
+
+    .container {
+        gap: 50px;
+    }
+
+    .mainTitle {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .stepsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .stepCard {
+        padding: 24px 20px;
+    }
+
+    .stepTitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .stepDescription {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .ctaSection {
+        padding: 32px 24px;
+    }
+
+    .ctaTitle {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .ctaSubtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .ctaButton {
+        padding: 16px 40px;
+        font-size: 15px;
+    }
+
+    .raizTitle {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .raizSubtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .raizGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .raizCard {
+        padding: 20px 16px;
+    }
+
+    .raizLetter {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .raizCardTitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .raizCardDescription {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainTitle {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .stepCard {
+        padding: 20px 16px;
+    }
+
+    .stepTitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .stepDescription {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .ctaTitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .ctaSubtitle {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .ctaButton {
+        padding: 14px 32px;
+        font-size: 14px;
+    }
+
+    .raizTitle {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .raizSubtitle {
+        font-size: 15px;
+        line-height: 22px;
     }
 }

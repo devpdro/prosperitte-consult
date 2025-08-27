@@ -1,23 +1,29 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
-import { IconCheck } from '@tabler/icons-react'
+import { IconX } from '@tabler/icons-react'
 import S from './path.module.scss'
 
-const steps = [
+const targetAudience = [
     {
-        number: 1,
-        text: 'Simule o consórcio desejado',
+        text: 'Investidores, empresários e profissionais liberais que querem renda passiva e aceleração patrimonial.'
     },
     {
-        number: 2,
-        text: 'Escolha a parcela que cabe no seu bolso',
+        text: 'Quem já possui algum capital e busca estratégias inteligentes para alavancar e blindar o patrimônio.'
     },
     {
-        number: 3,
-        text: 'Contrate o plano de consórcio ideal',
+        text: 'Quem pensa no longo prazo e valoriza segurança com crescimento.'
     },
-]
+    {
+        text: 'Quem está cansado de retornos medíocres e quer uma visão profissional e personalizada.'
+    }
+];
+
+const notForAudience = [
+    {
+        text: 'Quem busca "enriquecimento rápido" sem estrutura, sem disciplina ou com expectativa de garantias de ganhos.'
+    }
+];
 
 const Path = () => {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -53,38 +59,56 @@ const Path = () => {
 
     return (
         <section className={S.pathSection}>
-            <h2 className={S.title}>
-                Realize suas conquistas em <span className={S.bold}>3 passos</span>
-            </h2>
-            <div className={S.stepsWrapper} ref={containerRef}>
-                <div className={S.line} />
-                <div
-                    className={S.lineProgress}
-                    style={{ width: `${progress * 100}%` }}
-                />
-                <div className={S.steps}>
-                    {steps.map((step, idx) => (
-                        <div
-                            className={S.step}
-                            key={idx}
-                            ref={el => { stepRefs.current[idx] = el; }}
-                        >
-                            <div className={S.circle}>{step.number}</div>
-                            <div className={S.stepText}>{step.text}</div>
+            <div className={S.container}>
+                <div className={S.content}>
+                    {/* Left Column - Title */}
+                    <div className={S.titleColumn}>
+                        <h2 className={S.title}>
+                            <span className={S.titleLine1}>Para quem é</span>
+                            <span className={S.titleLine2}>a Prospéritté?</span>
+                        </h2>
+                    </div>
+
+                    {/* Right Column - Content */}
+                    <div className={S.contentColumn}>
+                        <div className={S.contentSection}>
+                            <div className={S.sectionHeader}>
+                                <div className={S.verticalLine}></div>
+                                <h3 className={S.contentTitle}>É para você que deseja...</h3>
+                            </div>
+                            <div className={S.listContainer}>
+                                {targetAudience.map((item, index) => (
+                                    <div className={S.listItem} key={index}>
+                                        <div className={S.itemNumber}>
+                                            {(index + 1).toString().padStart(2, '0')}
+                                        </div>
+                                        <p className={S.itemText}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    ))}
-                    <div className={S.step} ref={el => { stepRefs.current[steps.length] = el; }}>
-                        <div className={S.circle}>
-                            <IconCheck size={22} color="#0a2a32" stroke={2.5} />
-                        </div>
-                        <div className={S.stepTextFinal}>
-                            <p>Descomplicado e fácil, dê um impulso aos seus planos</p>
+
+                        <div className={S.contentSection}>
+                            <div className={S.sectionHeader}>
+                                <div className={S.verticalLine}></div>
+                                <h3 className={S.contentTitle}>Para quem não é:</h3>
+                            </div>
+                            <div className={S.listContainer}>
+                                {notForAudience.map((item, index) => (
+                                    <div className={S.listItem} key={index}>
+                                        <div className={S.itemNumber}>
+                                            <IconX size={16} stroke={2} />
+                                        </div>
+                                        <p className={S.itemText}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Path

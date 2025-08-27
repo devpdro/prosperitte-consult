@@ -1,101 +1,128 @@
-'use client'
-
-import { useEffect, useState } from 'react';
-
+import { IconTarget, IconMessageCircle, IconChartBar, IconShieldCheck, IconPhoneCall, IconBookmark } from '@tabler/icons-react';
 import styles from './letters.module.scss';
 
-const LETTERS = [
-    { credito: 'R$ 145.000,00', pagas: 2, parcela: 'R$ 925,00' },
-    { credito: 'R$ 160.000,00', pagas: 3, parcela: 'R$ 1.010,00' },
-    { credito: 'R$ 180.000,00', pagas: 3, parcela: 'R$ 1.135,00' },
-    { credito: 'R$ 200.000,00', pagas: 3, parcela: 'R$ 1.210,00' },
-    { credito: 'R$ 220.000,00', pagas: 3, parcela: 'R$ 1.320,00' },
-    { credito: 'R$ 255.000,00', pagas: 1, parcela: 'R$ 1.520,00' },
-    { credito: 'R$ 300.000,00', pagas: 4, parcela: 'R$ 1.840,00' },
-    { credito: 'R$ 750.000,00', pagas: 5, parcela: 'R$ 4.890,00' }
+const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es!';
+
+const consultationSteps = [
+    {
+        icon: <IconTarget size={32} stroke={2} />,
+        title: 'Análise de Perfil',
+        description: 'Avaliação completa do seu perfil financeiro: patrimônio atual, fluxo de caixa e perfil de risco.'
+    },
+    {
+        icon: <IconChartBar size={32} stroke={2} />,
+        title: 'Definição de Objetivos',
+        description: 'Estabelecimento de metas financeiras de médio e longo prazo, com foco em renda passiva e crescimento patrimonial.'
+    },
+    {
+        icon: <IconShieldCheck size={32} stroke={2} />,
+        title: 'Estratégia Personalizada',
+        description: 'Desenvolvimento de estratégia customizada de alavancagem: seleção de cartas, FIIs e cronograma de investimentos.'
+    },
+    {
+        icon: <IconMessageCircle size={32} stroke={2} />,
+        title: 'Assessoria Especializada',
+        description: 'Acompanhamento na aquisição de ativos imobiliários estratégicos ou otimização de carteira de consórcios.'
+    }
 ];
 
-const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20tenho%20interesse%20em%20fazer%20um%20cons%C3%B3rcio!';
-const ctaUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20da%20Prosp%C3%A9ritt%C3%A9%20Consult.';
+const raizMethod = [
+    {
+        letter: 'R',
+        title: 'Retorno',
+        description: 'Geração de renda passiva + valorização patrimonial sustentável'
+    },
+    {
+        letter: 'A',
+        title: 'Alavancagem',
+        description: 'Multiplicação do poder de compra sem comprometer capital próprio'
+    },
+    {
+        letter: 'I',
+        title: 'Investimento',
+        description: 'Ativo real, tangível e com proteção contra volatilidade de mercado'
+    },
+    {
+        letter: 'Z',
+        title: 'Zero Risco Excessivo',
+        description: 'Previsibilidade de pagamentos e proteção contra juros compostos'
+    }
+];
 
 export default function Letters() {
-    const [, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth <= 600);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
     return (
-        <section id='cartas-contempladas' className={styles.lettersSection}>
-            <h2 className={styles.title}>Cartas Contempladas</h2>
-            <p className={styles.subtitle}>
-                Os créditos listados abaixo são provenientes de clientes que já foram contemplados por lance ou sorteio e estão prontos para uso imediato.
-            </p>
-            <div className={styles.tableWrapper}>
-                <table className={styles.lettersTable}>
-                    <thead>
-                        <tr>
-                            <th>Crédito</th>
-                            <th>Parcelas Pagas</th>
-                            <th>Parcelas</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {LETTERS.map((item, idx) => (
-                            <tr key={idx}>
-                                <td>{item.credito}</td>
-                                <td>{item.pagas}</td>
-                                <td>{item.parcela}</td>
-                                <td>
-                                    <a
-                                        href={whatsappUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={styles.whatsappBtn}
-                                    >
-                                        Tenho interesse
-                                    </a>
-                                </td>
-                            </tr>
+        <section className={styles.lettersSection}>
+            <div className={styles.container}>
+                <div className={styles.header}>
+                    <h2 className={styles.mainTitle}>
+                        Metodologia da Consultoria
+                    </h2>
+                    <p className={styles.subtitle}>
+                        Transformação patrimonial através de estratégias avançadas de alavancagem financeira
+                    </p>
+                </div>
+
+                <div className={styles.consultationSection}>
+                    <div className={styles.stepsGrid}>
+                        {consultationSteps.map((step, index) => (
+                            <div className={styles.stepCard} key={index}>
+                                <div className={styles.stepIcon}>
+                                    {step.icon}
+                                </div>
+                                <div className={styles.stepContent}>
+                                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                                    <p className={styles.stepDescription}>{step.description}</p>
+                                </div>
+                                <div className={styles.stepNumber}>{index + 1}</div>
+                            </div>
                         ))}
-                    </tbody>
-                </table>
-            </div>
-            <div className={styles.mobileCards}>
-                {LETTERS.map((item, idx) => (
-                    <div className={styles.mobileCard} key={idx}>
-                        <div className={styles.mobileCardInfo}>
-                            <div><strong>Crédito:</strong> {item.credito}</div>
-                            <div><strong>Parcela:</strong> {item.parcela}</div>
-                            <div><strong>Pagas:</strong> {item.pagas} parcela{item.pagas > 1 ? 's' : ''}</div>
+                    </div>
+
+                    <div className={styles.ctaSection}>
+                        <div className={styles.ctaContent}>
+                            <div className={styles.ctaIcon}>
+                                <IconPhoneCall size={40} stroke={2} />
+                            </div>
+                            <h3 className={styles.ctaTitle}>
+                                Agende sua Consultoria Estratégica
+                            </h3>
+                            <p className={styles.ctaSubtitle}>
+                                Primeira sessão gratuita para análise do seu perfil financeiro
+                            </p>
                         </div>
-                        <a
-                            href={whatsappUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.whatsappBtn}
-                        >
-                            Tenho interesse
+                        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
+                            AGENDAR CONSULTORIA GRATUITA
                         </a>
                     </div>
-                ))}
-            </div>
-            <div className={styles.ctaContainer}>
-                <p className={styles.ctaText}>
-                    Não encontrou o crédito ideal? Fale com nossos consultores <br /> A menos taxa com parcelas que cabem no seu bolso!
-                </p>
-                <a
-                    href={ctaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.ctaBtn}
-                >
-                    FALE CONOSCO
-                </a>
+                </div>
+
+                <div className={styles.raizSection}>
+                    <div className={styles.raizHeader}>
+                        <div className={styles.raizHeaderIcon}>
+                            <IconBookmark size={32} stroke={2} />
+                        </div>
+                        <h3 className={styles.raizTitle}>
+                            Metodologia RAIZ para Consórcios
+                        </h3>
+                        <p className={styles.raizSubtitle}>
+                            Framework exclusivo para maximização de resultados patrimoniais
+                        </p>
+                    </div>
+
+                    <div className={styles.raizGrid}>
+                        {raizMethod.map((item, index) => (
+                            <div className={styles.raizCard} key={index}>
+                                <div className={styles.raizLetter}>
+                                    {item.letter}
+                                </div>
+                                <div className={styles.raizContent}>
+                                    <h4 className={styles.raizCardTitle}>{item.title}</h4>
+                                    <p className={styles.raizCardDescription}>{item.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     );

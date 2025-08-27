@@ -1,209 +1,942 @@
-@import '../../../styles/themes/light.scss';
-@import '../../../styles/themes/mixins.scss';
-
 .achievementSection {
-  @include container(1380px);
-  padding: 32px 1rem 32px 1rem;
-  background: #fff;
-  text-align: center;
-}
-
-.sectionTitle {
-  color: $color-primary;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  text-align: left;
-  margin-left: 2.5vw;
-}
-
-.sectionSubtitle {
-  font-size: 1.15rem;
-  font-weight: 400;
-  margin-bottom: 2.5rem;
-  text-align: left;
-  margin-left: 2.5vw;
-  color: #616161;
-
-  strong {
-    font-weight: 700;
-  }
-}
-
-.cardsContainer {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 1380px;
-}
-
-.card {
-  background: #f9f8f7;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
-  padding: 0;
-  width: 290px;
-  min-height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  transition: box-shadow 0.2s;
-  border: none;
-  overflow: hidden;
-  text-align: left;
-}
-
-.cardImage {
   width: 100%;
-  height: 140px;
-  background: #eee;
+  background: #D7DFEA;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.heroSection {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #9831FB;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 24px rgba(152, 49, 251, 0.3);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+
+
+.heroTitle {
+  color: #1e293b;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  color: #9831FB;
+}
+
+.heroSubtitle {
+  color: #64748b;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  max-width: 650px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.personProfile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(152, 49, 251, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #9831FB;
   }
 }
 
-.cardContent {
-  padding: 28px 24px 24px 24px;
+.personAvatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatarRing {
+  width: 70px;
+  height: 70px;
+  background: #9831FB;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(152, 49, 251, 0.3);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: #9831FB;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+.statusBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #10b981;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.personInfo {
   flex: 1;
 }
 
-.cardIcon {
-  margin-bottom: 8px;
+.personName {
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 6px 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.cardTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: $color-primary;
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.personAge {
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.cardList {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 18px 0;
+.personContext {
+  color: #475569;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
 
-  li {
-    font-size: 1rem;
-    color: $color-primaryFade;
-    margin-bottom: 8px;
-    font-weight: 400;
+.strategyTimeline {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  position: relative;
+  overflow: hidden;
 
-    strong,
-    b {
-      font-weight: 700;
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #10b981;
   }
 }
 
-.cardObs {
-  font-size: 0.98rem;
-  color: $color-primaryFade;
-  margin-top: auto;
-  border-top: 1px solid #e5e0dc;
-  padding-top: 16px;
-}
-
-.ctaContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 48px 0 0 0;
-}
-
-.ctaText {
-  color: #757575;
-  font-size: 1.1rem;
+.timelineHeader {
   text-align: center;
   margin-bottom: 24px;
 }
 
-.ctaBtn {
-  background: #FACA5D;
-  color: #fff;
+.timelineTitle {
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.timelineProgress {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 100%;
+  height: 100%;
+  background: #10b981;
+  border-radius: 4px;
+}
+
+
+
+.timelineSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timelineStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.stepConnector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 16px;
+}
+
+.stepDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.stepLine {
+  width: 4px;
+  height: 60px;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.stepContent {
+  flex: 1;
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+  }
+}
+
+.stepIcon {
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.stepText {
+  flex: 1;
+}
+
+.stepTitle {
+  color: #1e293b;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 6px 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.stepDescription {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.stepNumber {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: #9831FB;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resultsShowcase {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #f59e0b;
+  }
+}
+
+.resultsHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.resultsTitle {
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.timeHighlight {
+  color: #f59e0b;
+}
+
+.resultsSubtitle {
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.resultCard {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.resultIcon {
+  margin-bottom: 12px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+
+  .resultCard:hover & {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.resultContent {
+  flex: 1;
+}
+
+.resultNumber {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.number {
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.unit {
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resultTitle {
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.resultGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.8;
+}
+
+.conclusionSection {
+  display: flex;
+  justify-content: center;
+}
+
+.conclusionCard {
+  background: #9831FB;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 12px 32px rgba(152, 49, 251, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.conclusionIcon {
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.conclusionContent {
+  position: relative;
+  z-index: 2;
+}
+
+.conclusionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.conclusionText {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.resultsCta {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(152, 49, 251, 0.2);
+}
+
+.ctaButton {
+  background: #9831FB;
+  color: white;
   border: none;
-  border-radius: 32px;
-  padding: 16px 48px;
-  font-size: 1.2rem;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(152, 49, 251, 0.3);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-  font-weight: 400;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(152, 49, 251, 0.4);
+    background: #8a2be2;
+  }
 }
 
-.ctaBtn:hover {
-  background: #9a6609;
-}
+@media (max-width: 1024px) {
+  .achievementSection {
+    padding: 50px 20px;
+  }
 
-@media (max-width: 1200px) {
-  .cardsContainer {
+  .container {
+    gap: 32px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .heroSubtitle {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .mainContent {
+    gap: 32px;
+  }
+
+  .personProfile {
+    padding: 20px;
     gap: 20px;
   }
 
-  .card {
-    width: 300px;
-    min-height: 440px;
+  .avatarRing {
+    width: 60px;
+    height: 60px;
   }
-}
 
-@media (max-width: 900px) {
-  .cardsContainer {
+  .personName {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .strategyTimeline,
+  .resultsShowcase {
+    padding: 20px;
+  }
+
+  .timelineTitle,
+  .resultsTitle {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .timelineSteps {
     gap: 16px;
   }
 
-  .card {
-    width: 90vw;
-    max-width: 370px;
-    min-height: 420px;
+  .timelineStep {
+    gap: 16px;
   }
 
-  .sectionTitle,
-  .sectionSubtitle {
-    margin-left: 4vw;
-    text-align: left;
+  .stepContent {
+    padding: 16px;
+  }
+
+  .resultsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .resultCard {
+    padding: 20px 16px;
+  }
+
+  .number {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .conclusionCard {
+    padding: 20px;
+  }
+
+  .conclusionTitle {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .ctaButton {
+    padding: 14px 28px;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 600px) {
-  .cardsContainer {
+@media (max-width: 768px) {
+  .achievementSection {
+    padding: 40px 12px;
+  }
+
+  .container {
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .mainContent {
+    gap: 24px;
+  }
+
+  .personProfile {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .avatarRing {
+    width: 50px;
+    height: 50px;
+  }
+
+  .personName {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .personContext {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .strategyTimeline,
+  .resultsShowcase {
+    padding: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .timelineSteps {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .timelineStep {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .stepConnector {
+    flex-direction: row;
+    margin-top: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .stepLine {
+    width: 30px;
+    height: 3px;
+    margin-top: 0;
+    margin-left: 6px;
+  }
+
+  .stepContent {
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .stepTitle {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .stepDescription {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .timelineTitle,
+  .resultsTitle {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .resultsGrid {
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .card {
+  .resultCard {
+    padding: 16px 12px;
+  }
+
+  .number {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .unit {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .resultTitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .conclusionCard {
+    padding: 20px;
+  }
+
+  .conclusionTitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .conclusionText {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .ctaSection {
+    padding: 24px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .ctaSubtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .ctaButton {
+    padding: 14px 32px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievementSection {
+    padding: 30px 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .strategyTimeline,
+  .resultsShowcase {
+    padding: 8px;
     width: 100%;
-    max-width: 100vw;
-    min-height: 360px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
   }
 
-  .ctaBtn {
-    padding: 10px 10vw;
-    font-size: 0.95rem;
+  .timelineSteps {
+    width: 100%;
   }
 
-  .sectionTitle {
-    margin-left: 2vw;
-    font-size: 1.4rem;
+  .timelineStep {
+    width: 100%;
   }
 
-  .sectionSubtitle {
-    margin-left: 2vw;
-    font-size: 1.2rem;
+  .stepContent {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .personName {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .personContext {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .stepTitle {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .stepDescription {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .timelineTitle,
+  .resultsTitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .number {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .unit {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .resultTitle {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .conclusionTitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .conclusionText {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .ctaTitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .ctaSubtitle {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .ctaButton {
+    padding: 12px 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .achievementSection {
+    padding: 20px 8px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .strategyTimeline,
+  .resultsShowcase {
+    padding: 6px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .timelineSteps {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .timelineStep {
+    width: 100%;
+  }
+
+  .stepContent {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
   }
 }
