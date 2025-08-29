@@ -1,4 +1,4 @@
-import { IconPigMoney, IconBuilding, IconChartLine, IconBulb } from '@tabler/icons-react';
+import { IconPigMoney, IconBuilding, IconChartLine, IconBulb, IconCheck } from '@tabler/icons-react';
 import styles from './warning.module.scss';
 
 export default function Warning() {
@@ -63,13 +63,12 @@ export default function Warning() {
                             <h3 className={styles.solutionTitle}>O Método que Funciona</h3>
                         </div>
                         <p className={styles.solutionDescription}>
-                            <span className={styles.solutionHighlight}>Consórcio + Imóveis Estratégicos</span> = a única fórmula que te liberta financeiramente.
-                            <strong>Sem juros. Sem riscos. Só resultados.</strong>
+                            <span className={styles.solutionHighlight}>Estratégia baseada em imóveis + planejamento estruturado.</span> Sem juros bancários. Com ativos reais. Com previsibilidade.
                         </p>
                         <div className={styles.solutionBenefits}>
-                            <span className={styles.benefit}>✓ 0% juros bancários</span>
-                            <span className={styles.benefit}>✓ Renda passiva garantida</span>
-                            <span className={styles.benefit}>✓ Patrimônio multiplicado</span>
+                            <span className={styles.benefit}><IconCheck size={16} stroke={2} /> Menor exposição ao risco</span>
+                            <span className={styles.benefit}><IconCheck size={16} stroke={2} /> Imóveis como base de geração de renda</span>
+                            <span className={styles.benefit}><IconCheck size={16} stroke={2} /> Crescimento patrimonial estratégico</span>
                         </div>
                         <div className={styles.gradientSwoosh}></div>
                     </div>

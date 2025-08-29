@@ -65,7 +65,7 @@ const Path = () => {
                     <div className={S.titleColumn}>
                         <h2 className={S.title}>
                             <span className={S.titleLine1}>Para quem é</span>
-                            <span className={S.titleLine2}>a Prospéritté?</span>
+                            <span className={S.titleLine2}>nossa Consultoria?</span>
                         </h2>
                     </div>
 

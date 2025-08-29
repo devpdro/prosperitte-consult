@@ -10,12 +10,12 @@ const benefits = [
     {
         icon: <IconTrendingUp size={32} stroke={2} />,
         title: 'Renda Passiva',
-        description: 'Gere renda mensal sem juros bancários, usando o dinheiro do inquilino.'
+        description: 'Possibilidade de renda mensal com ativos reais alugados.'
     },
     {
         icon: <IconHome size={32} stroke={2} />,
         title: 'Imóvel Quitado',
-        description: 'Ao final, você tem um imóvel quitado com valorização e lucro mensal.'
+        description: 'Imóvel quitado com potencial de valorização e geração de receita.'
     }
 ];
 
@@ -28,7 +28,7 @@ const conceptSteps = [
     {
         number: '80%',
         title: 'Pago pelo Inquilino',
-        description: 'Os outros 80% são cobertos pelo aluguel mensal'
+        description: 'O aluguel pode ajudar a cobrir parte ou até a totalidade das parcelas'
     }
 ];
 

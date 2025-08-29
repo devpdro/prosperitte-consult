@@ -17,7 +17,7 @@ const consultationSteps = [
     {
         icon: <IconShieldCheck size={32} stroke={2} />,
         title: 'Estratégia Personalizada',
-        description: 'Desenvolvimento de estratégia customizada de alavancagem: seleção de cartas, FIIs e cronograma de investimentos.'
+        description: 'Desenvolvimento de um plano sob medida para seu perfil e objetivos, com uso de ativos reais, simulações práticas e cronograma estratégico de crescimento patrimonial.'
     },
     {
         icon: <IconMessageCircle size={32} stroke={2} />,

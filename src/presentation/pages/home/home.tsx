@@ -9,16 +9,15 @@ const Home = () => {
   return (
     <div>
       <Meta
-        title="Prospéritté Consult "
-        description="Realize seus sonhos com a Prospéritté Consult, especialista em consórcios. Simule seu consórcio de forma rápida, segura e sem burocracia. Planeje seu futuro com as melhores condições do mercado!"
-        keywords="consórcio, simulação de consórcio, Prospéritté Consult, consórcio imobiliário, consórcio de veículos, consórcio online, planejamento financeiro, segurança, sem juros, carta de crédito" />
-      <Header/>
+        title="Agnaldo Tomsic - Consultor em Alavancagem Patrimonial"
+        description="Estratégias inteligentes para construção de patrimônio através de consórcios e investimentos imobiliários. Consultoria personalizada em alavancagem patrimonial com Agnaldo Tomsic."
+        keywords="consórcio, alavancagem patrimonial, Agnaldo Tomsic, consórcio imobiliário, investimento imobiliário, planejamento financeiro, patrimônio, renda passiva, consultoria financeira, estratégias de investimento" />
+      <Header />
       <Warning />
       <Rate />
       <Letters />
       <Achievement />
       <Path />
-
       <Faq />
       <Footer />
 

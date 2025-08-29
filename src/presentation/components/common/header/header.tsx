@@ -24,15 +24,15 @@ const Header = () => (
         </div>
 
         <h1 className={S.title}>
-          Compre imóveis pagando apenas <span className={S.highlight}>20%</span> e deixe o inquilino quitar os outros <span className={S.highlight}>80%</span>
+          Construa seu <span className={S.highlight}>patrimônio</span> com <span className={S.highlight}>estratégia</span>, previsibilidade e sem juros bancários
         </h1>
 
         <div className={S.textContent}>
           <p className={S.paragraph}>
-            Transforme seu boleto em escritura usando <strong>Alavancagem Patrimonial</strong> com Consórcio.
+            Descubra um modelo de aquisição imobiliária usado por investidores e empresários para gerar renda passiva e crescer com segurança.
           </p>
           <p className={S.paragraph}>
-            Conheça o <strong>Método RAIZ</strong>: Retorno • Alavancagem • Investimento • Zero risco excessivo.
+            Comece hoje mesmo, mesmo com pouco capital inicial.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const Header = () => (
 
         <div className={S.ctaContainer}>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={S.ctaButton}>
-            <span className={S.ctaMain}>Agende sua Consultoria Gratuita</span>
+            <span className={S.ctaMain}>Quero uma consultoria personalizada</span>
             <IconArrowRight size={20} stroke={2} />
           </a>
           <div className={S.ctaSubtitle}>

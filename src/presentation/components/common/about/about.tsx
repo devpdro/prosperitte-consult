@@ -45,7 +45,7 @@ const About = () => (
                     Quem somos
                 </h2>
                 <p className={S.subtitle}>
-                    Fundada em 2018 e sediada em Piracicaba-SP, a <strong>Prospéritté Consult</strong> nasceu com uma missão clara:
+                    Fundada em 2018 e sediada em Piracicaba-SP, a <strong>Agnaldo Tomsic Consultoria</strong> nasceu com uma missão clara:
                     transformar o potencial de crescimento patrimonial em realidade acessível para nossos clientes.
                     Com mais de <strong>10 anos de experiência</strong> dos sócios no mercado de consórcios e seguros, desenvolvemos
                     uma abordagem consultiva que vai além da simples venda de produtos financeiros.<br /><br />
@@ -56,7 +56,7 @@ const About = () => (
                     consultoria estratégica que antecede qualquer recomendação.<br /><br />
 
                     Nossa especialidade é a alavancagem patrimonial inteligente. Através de estratégias estruturadas, ajudamos
-                    investidores a acelerar o crescimento do patrimônio, como no <strong>Prospéritté 7.0</strong>, nosso programa exclusivo
+                    investidores a acelerar o crescimento do patrimônio, como no <strong>Método Tomsic</strong>, nosso programa exclusivo
                     de investimento imobiliário.
                 </p>
             </div>

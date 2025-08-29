@@ -1,80 +1,342 @@
 .footer {
   width: 100%;
-  background: #DAE2EB;
-  padding: 40px 20px;
+  background: #D9E2EB;
+  color: #1e293b;
+  padding: 60px 0 0 0;
 }
 
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+}
+
+// Main Footer Content
+.mainFooter {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(152, 49, 251, 0.2);
+}
+
+// Company Info
+.companyInfo {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
+}
+
+.companyName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.companyTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #9831FB;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.companyDescription {
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// Section Titles
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+// Contact Info
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #1e293b;
+  }
+
+  svg {
+    color: #9831FB;
+    flex-shrink: 0;
+  }
+}
+
+// Social Media
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.socialItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  &:hover {
+    color: #1e293b;
+    background: rgba(152, 49, 251, 0.1);
+    transform: translateX(4px);
+  }
+
+  svg {
+    color: #9831FB;
+    flex-shrink: 0;
+  }
+}
+
+// CTA Section
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ctaText {
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #9831FB;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+  width: fit-content;
+  box-shadow: 0 4px 12px rgba(152, 49, 251, 0.3);
+
+  &:hover {
+    background: #8a2be2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(152, 49, 251, 0.4);
+  }
+
+  svg {
+    color: white;
+  }
+}
+
+// Bottom Footer
+.bottomFooter {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
   text-align: center;
 }
 
-.privacyText {
-  color: #374151;
+.disclaimer {
+  max-width: 800px;
+}
+
+.disclaimer p {
   font-size: 12px;
   font-weight: 400;
+  color: #64748b;
   line-height: 1.5;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   margin: 0;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.copyright {
-  color: #374151;
-  font-size: 11px;
+.copyright p {
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.4;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #64748b;
   margin: 0;
-  letter-spacing: 0.3px;
-  text-align: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .mainFooter {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .companyInfo {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 32px 16px;
+    padding: 40px 0 0 0;
   }
 
-  .content {
-    gap: 14px;
+  .container {
+    padding: 0 16px;
   }
 
-  .privacyText {
+  .mainFooter {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .companyInfo {
+    text-align: center;
+  }
+
+  .companyName {
+    font-size: 20px;
+  }
+
+  .companyTitle {
+    font-size: 14px;
+  }
+
+  .companyDescription {
+    font-size: 13px;
+  }
+
+  .sectionTitle {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .contactItem,
+  .socialItem {
+    font-size: 13px;
+  }
+
+  .ctaText {
+    font-size: 13px;
+  }
+
+  .ctaButton {
+    padding: 12px 20px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .bottomFooter {
+    padding: 20px 0;
+    gap: 12px;
+  }
+
+  .disclaimer p,
+  .copyright p {
     font-size: 11px;
-    line-height: 1.4;
-  }
-
-  .copyright {
-    font-size: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 24px 16px;
+    padding: 32px 0 0 0;
   }
 
-  .content {
-    gap: 12px;
+  .container {
+    padding: 0 12px;
   }
 
-  .privacyText {
+  .mainFooter {
+    gap: 24px;
+  }
+
+  .companyName {
+    font-size: 18px;
+  }
+
+  .companyTitle {
+    font-size: 13px;
+  }
+
+  .companyDescription {
+    font-size: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .contactItem,
+  .socialItem {
+    font-size: 12px;
+  }
+
+  .ctaText {
+    font-size: 12px;
+  }
+
+  .ctaButton {
+    padding: 10px 18px;
+    font-size: 13px;
+    align-self: center;
+  }
+
+  .bottomFooter {
+    padding: 16px 0;
+    gap: 10px;
+  }
+
+  .disclaimer p,
+  .copyright p {
     font-size: 10px;
-    line-height: 1.4;
-  }
-
-  .copyright {
-    font-size: 9px;
   }
 }

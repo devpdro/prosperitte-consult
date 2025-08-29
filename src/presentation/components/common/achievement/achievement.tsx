@@ -7,21 +7,21 @@ const strategySteps = [
     {
         icon: <IconChartBar size={32} stroke={2} />,
         title: 'Investiu R$ 500 mil em FIIs',
-        description: 'Gerando ~R$ 5.000/mês em dividendos',
+        description: 'Gerando aproximadamente R$ 5.000/mês em dividendos',
         color: '#10b981',
         gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
     },
     {
         icon: <IconHome size={32} stroke={2} />,
-        title: 'Assumiu 5 cartas de consórcio',
-        description: 'R$ 300 mil cada (R$ 1,5 milhão de crédito)',
+        title: 'Assumiu 5 contratos dentro do planejamento',
+        description: 'R$ 300 mil cada (R$ 1,5 milhão de alavancagem)',
         color: '#8503FE',
         gradient: 'linear-gradient(135deg, #8503FE 0%, #8b5cf6 100%)'
     },
     {
         icon: <IconTrendingUp size={32} stroke={2} />,
         title: 'Compra para locação',
-        description: 'O aluguel quita as parcelas automaticamente',
+        description: 'O imóvel com vocação locatícia amortiza as parcelas',
         color: '#f59e0b',
         gradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'
     }
@@ -31,14 +31,14 @@ const results = [
     {
         number: 'R$ 1,5',
         unit: 'milhão',
-        title: 'em imóveis quitados',
+        title: 'Potencial de até R$ 1,5 milhão em patrimônio consolidado',
         icon: <IconHome size={24} stroke={2} />,
         color: '#10b981'
     },
     {
         number: 'R$ 10',
         unit: 'mil/mês',
-        title: 'de renda passiva',
+        title: 'Receita mensal através de aluguéis proporcionais aos ativos adquiridos',
         icon: <IconTrendingUp size={24} stroke={2} />,
         color: '#8503FE'
     },
@@ -65,7 +65,7 @@ export default function Achievement() {
                         O Poder da <span className={styles.highlight}>Alavancagem Inteligente</span>
                     </h2>
                     <p className={styles.heroSubtitle}>
-                        Veja como Carlos transformou R$ 500 mil em um império imobiliário
+                        Veja como Carlos transformou R$ 500 mil em quase 2 milhões de reais
                     </p>
                 </div>
 
