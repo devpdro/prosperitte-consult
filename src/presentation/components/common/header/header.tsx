@@ -54,7 +54,6 @@ const Header = () => (
         <div className={S.ctaContainer}>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={S.ctaButton}>
             <span className={S.ctaMain}>Quero uma consultoria personalizada</span>
-            <IconArrowRight size={20} stroke={2} />
           </a>
           <div className={S.ctaSubtitle}>
             <div className={S.ctaFeature}>
@@ -82,11 +81,6 @@ const Header = () => (
           </div>
         </div>
       </div>
-    </div>
-
-    <div className={S.scrollIndicator}>
-      <div className={S.scrollText}>Role para saber mais</div>
-      <IconChevronDown size={24} stroke={2} className={S.scrollIcon} />
     </div>
   </header>
 )
