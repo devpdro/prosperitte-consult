@@ -1,7 +1,7 @@
 import { IconTarget, IconMessageCircle, IconChartBar, IconShieldCheck, IconPhoneCall, IconBookmark } from '@tabler/icons-react';
 import styles from './letters.module.scss';
 
-const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Prosp%C3%A9ritt%C3%A9%20Consult%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es!';
+const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria.';
 
 const consultationSteps = [
     {
