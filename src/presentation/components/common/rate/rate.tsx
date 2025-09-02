@@ -43,7 +43,7 @@ export default function Rate() {
                                 Estratégia de Alavancagem Inteligente
                             </h3>
                             <p className={styles.conceptDescription}>
-                                Em vez de imobilizar 100% do capital pagando o imóvel à vista, você investe cerca de 20% de forma parcelada e planejada. Os outros 80%? São pagos pelo próprio inquilino, via aluguel que pode cobrir integralmente as parcelas do consórcio.
+                                Em vez de imobilizar 100% do capital pagando o imóvel à vista, você investe cerca de 20% de forma parcelada e planejada. Os outros 80%? São pagos pelo próprio inquilino, via aluguel que pode cobrir integralmente as parcelas do contrato.
                             </p>
                         </div>
                     </div>

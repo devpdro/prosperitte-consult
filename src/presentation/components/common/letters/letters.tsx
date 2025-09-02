@@ -44,7 +44,7 @@ const raizMethod = [
     },
     {
         letter: 'Z',
-        title: 'Zero de Crescimento',
+        title: 'Zona de Crescimento',
         description: 'Estabilidade financeira com foco em patrimônio real e previsibilidade'
     }
 ];
