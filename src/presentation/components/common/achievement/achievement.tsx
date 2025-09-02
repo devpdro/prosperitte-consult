@@ -38,7 +38,7 @@ const results = [
     {
         number: 'R$ 10',
         unit: 'mil/mês',
-        title: 'Receita mensal através de aluguéis proporcionais aos ativos adquiridos',
+        title: 'Projeção de renda mensal a partir de ativos imobiliários adquiridos',
         icon: <IconTrendingUp size={24} stroke={2} />,
         color: '#8503FE'
     },

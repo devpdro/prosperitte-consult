@@ -6,122 +6,55 @@ const PrivacyPolicy = () => {
     return (
         <div>
             <Meta
-                title="Política de Privacidade | Consórcio Prospéritté Consult"
-                description="Saiba como o Prospéritté Consult protege seus dados pessoais e garante a sua privacidade na contratação de consórcios digitais."
-                keywords="Política de Privacidade, Consórcio, privacidade, dados pessoais, proteção de dados, consórcio digital, financiamento, aquisição de bens"
+                title="Política de Privacidade | Agnaldo Tomsic"
+                description="Saiba como a Tomsic Consultoria protege seus dados pessoais e respeita sua privacidade."
+                keywords="Política de Privacidade, LGPD, privacidade, dados pessoais, Tomsic Consultoria, Agnaldo Tomsic"
             />
-            <Navbar />
             <div className={styles.privacyPolicyContainer}>
                 <div className={styles.privacyPolicyContent}>
                     <h1 className={styles.privacyTitle}>POLÍTICA DE PRIVACIDADE</h1>
 
-                    <h2>1. APRESENTAÇÃO</h2>
+                    <h2>1. COLETA DE INFORMAÇÕES</h2>
                     <p>
-                        Esta Política de Privacidade tem como objetivo esclarecer como o Prospéritté Consult coleta, utiliza, compartilha e protege os dados pessoais dos seus usuários, em total conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD) e demais legislações aplicáveis.
+                        Ao acessar nosso site, podemos coletar dados pessoais fornecidos voluntariamente pelo usuário, como nome, e-mail, telefone e outras informações necessárias para contato, envio de materiais e agendamento de consultorias.
                         <br /><br />
-                        Ao utilizar nosso site, plataforma ou contratar nossos serviços de consórcio, você declara estar ciente e de acordo com os termos aqui descritos.
-                        <br /><br />
-                        Nosso compromisso é garantir segurança, transparência e privacidade durante toda sua experiência conosco.
+                        Também utilizamos cookies e tecnologias semelhantes para melhorar a experiência de navegação e personalizar anúncios.
                     </p>
 
-                    <h2>2. DEFINIÇÕES IMPORTANTES</h2>
+                    <h2>2. USO DAS INFORMAÇÕES</h2>
+                    <p>Os dados coletados são utilizados para:</p>
                     <ul>
-                        <li><b>Dados Pessoais:</b> Qualquer informação que permita sua identificação direta ou indireta.</li>
-                        <li><b>Titular:</b> Pessoa física a quem os dados pessoais se referem.</li>
-                        <li><b>Controladora:</b> Prospéritté Consult, responsável por tomar as decisões sobre o tratamento dos dados.</li>
-                        <li><b>Operadora:</b> Empresas parceiras que tratam dados em nosso nome.</li>
-                        <li><b>Encarregado DPO:</b> Profissional que atua como canal de comunicação entre você e o Prospéritté Consult em relação aos seus dados.</li>
+                        <li>Entrar em contato com o usuário</li>
+                        <li>Enviar informações sobre produtos, serviços, materiais educativos e campanhas</li>
+                        <li>Melhorar a navegação e a personalização do site</li>
+                        <li>Cumprir exigências legais e regulatórias</li>
                     </ul>
 
-                    <h2>3. QUAIS DADOS COLETAMOS</h2>
-                    <h3>3.1 Dados Informados por Você</h3>
+                    <h2>3. COMPARTILHAMENTO DE INFORMAÇÕES</h2>
+                    <p>Não compartilhamos informações pessoais com terceiros, exceto:</p>
                     <ul>
-                        <li>Nome completo</li>
-                        <li>CPF e documentos de identidade</li>
-                        <li>Endereço completo</li>
-                        <li>Telefone, WhatsApp e e-mail</li>
-                        <li>Data de nascimento e profissão</li>
-                        <li>Informações financeiras para análise de crédito</li>
-                        <li>Selfie e foto de documentos para validação de identidade</li>
+                        <li>Plataformas de pagamento (quando aplicável, para aquisição de produtos/serviços)</li>
+                        <li>Fornecedores de tecnologia e marketing digital (ex.: Google, Meta, ferramentas de automação de e-mail/CRM)</li>
+                        <li>Quando exigido por lei</li>
                     </ul>
 
-                    <h3>3.2 Dados Coletados Automaticamente</h3>
+                    <h2>4. DIREITOS DO USUÁRIO</h2>
+                    <p>De acordo com a LGPD, você pode solicitar a qualquer momento:</p>
                     <ul>
-                        <li>Endereço IP</li>
-                        <li>Geolocalização</li>
-                        <li>Informações de navegação cookies, logs e dispositivo</li>
+                        <li>Confirmação da existência de tratamento de seus dados</li>
+                        <li>Acesso, correção ou exclusão de informações pessoais</li>
+                        <li>Revogação de consentimento para uso de dados</li>
                     </ul>
+                    <p>Solicitações podem ser feitas pelo e-mail: contato@tomsic-consultoria.com</p>
 
-                    <h2>4. FINALIDADE DO USO DOS DADOS</h2>
-                    <ul>
-                        <li>Realizar sua simulação de consórcio</li>
-                        <li>Formalizar sua adesão ao grupo de consórcio</li>
-                        <li>Analisar seu perfil para crédito e risco</li>
-                        <li>Cumprir obrigações legais e regulatórias</li>
-                        <li>Enviar comunicações e atualizações sobre sua cota</li>
-                        <li>Realizar atendimento, suporte e relacionamento</li>
-                        <li>Prevenir fraudes e garantir sua segurança</li>
-                        <li>Melhorar nossos serviços, site e plataforma</li>
-                    </ul>
+                    <h2>5. SEGURANÇA DOS DADOS</h2>
+                    <p>Adotamos medidas de segurança técnicas e organizacionais adequadas para proteger seus dados contra acessos não autorizados, perda ou alteração indevida.</p>
 
-                    <h2>5. COMPARTILHAMENTO DOS DADOS</h2>
-                    <p>Seus dados poderão ser compartilhados com:</p>
-                    <ul>
-                        <li>Instituições financeiras parceiras</li>
-                        <li>Administradoras de consórcios</li>
-                        <li>Empresas de tecnologia que fornecem infraestrutura e segurança</li>
-                        <li>Órgãos regulatórios e autoridades públicas, quando exigido</li>
-                        <li>Empresas de prevenção a fraudes e bureaus de crédito</li>
-                    </ul>
-                    <p>Todos os parceiros seguem padrões rigorosos de segurança e confidencialidade.</p>
-
-                    <h2>6. SEGURANÇA DOS DADOS</h2>
-                    <ul>
-                        <li>Criptografia de informações</li>
-                        <li>Ambientes seguros de armazenamento</li>
-                        <li>Controle de acessos internos</li>
-                        <li>Auditorias e monitoramento constante</li>
-                        <li>Políticas de segurança e privacidade aplicadas a todos os colaboradores</li>
-                    </ul>
-
-                    <h2>7. RETENÇÃO E EXCLUSÃO DOS DADOS</h2>
-                    <p>Seus dados serão armazenados:</p>
-                    <ul>
-                        <li>Pelo tempo necessário para cumprir as finalidades desta política</li>
-                        <li>Enquanto durar sua relação conosco</li>
-                        <li>Para cumprimento de obrigações legais, contratuais ou regulatórias</li>
-                    </ul>
-                    <p>Após esse período, os dados serão devidamente eliminados ou anonimizados.</p>
-
-                    <h2>8. DIREITOS DO TITULAR</h2>
-                    <p>Você possui os seguintes direitos garantidos pela LGPD:</p>
-                    <ul>
-                        <li>Acesso aos seus dados</li>
-                        <li>Confirmação da existência de tratamento</li>
-                        <li>Correção de dados incorretos</li>
-                        <li>Eliminação de dados desnecessários</li>
-                        <li>Portabilidade dos dados</li>
-                        <li>Informação sobre compartilhamento</li>
-                        <li>Revogação de consentimento</li>
-                    </ul>
-                    <p>Para exercer seus direitos, entre em contato:</p>
-                    <ul>
-                        <li>Assunto: &quot;Direitos do Titular - Dados&quot;</li>
-                    </ul>
-
-                    <h2>9. ATENDIMENTO</h2>
-                    <ul>
-                        <li>WhatsApp: 19 99327-3002</li>
-                    </ul>
-
-                    <h2>10. ALTERAÇÕES NA POLÍTICA</h2>
-                    <p>Podemos atualizar esta política periodicamente. Alterações relevantes serão comunicadas em nossos canais oficiais.</p>
-
-                    <h2>11. LEGISLAÇÃO APLICÁVEL E FORO</h2>
-                    <p>Esta política é regida pelas leis brasileiras, especialmente a Lei nº 13.709/2018 (LGPD). Fica eleito o foro da comarca de [cidade], salvo outro definido por lei aplicável.</p>
+                    <h2>6. ALTERAÇÕES DESTA POLÍTICA</h2>
+                    <p>Esta Política de Privacidade pode ser atualizada a qualquer momento, sendo recomendada a revisão periódica.</p>
 
                     <p className={styles.privacyFinal}>
-                        Prospéritté Consult — Todos os direitos reservados
+                        Tomsic Consultoria — Todos os direitos reservados
                     </p>
                     <p className={styles.privacyVersao}>
                         Versão 1.0 — Atualizada em 27 de maio de 2025

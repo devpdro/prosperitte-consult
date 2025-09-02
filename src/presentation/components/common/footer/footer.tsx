@@ -13,10 +13,10 @@ export default function Footer() {
             {/* Company Info */}
             <div className={styles.companyInfo}>
               <p className={styles.companyDescription}>
-                Estratégias inteligentes para construção de patrimônio através de consórcios e investimentos imobiliários.
+                Estratégias inteligentes para acelerar a construção do seu patrimônio com segurança e previsibilidade.
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
                   <IconBrandWhatsapp size={16} stroke={2} />
-                  <span>Falar Agora</span>
+                  <span>Agendar Minha Consultoria</span>
                 </a>
               </p>
             </div>
@@ -69,6 +69,9 @@ export default function Footer() {
             <div className={styles.disclaimer}>
               <p>
                 Todas as orientações oferecidas nesta página são consultivas, personalizadas e sem coleta de dados por meio do site.
+              </p>
+              <p>
+                <a href="/politica-de-privacidade">Política de Privacidade</a> • <a href="/termos-de-uso">Termos de Uso</a>
               </p>
             </div>
             <div className={styles.copyright}>

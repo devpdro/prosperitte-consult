@@ -22,7 +22,6 @@ const Header = () => (
           <IconCheck size={16} stroke={2} />
           <span>Método Comprovado</span>
         </div>
-
         <h1 className={S.title}>
           Construa seu <span className={S.highlight}>patrimônio</span> com <span className={S.highlight}>estratégia</span>, previsibilidade e sem juros bancários
         </h1>
@@ -76,8 +75,8 @@ const Header = () => (
         <div className={S.imageContainer}>
           <img src={IMAGE.AGNALDO.src} alt="Agnaldo - Especialista em Consórcios" />
           <div className={S.imageBadge}>
-            <span className={S.badgeTitle}>Agnaldo</span>
-            <span className={S.badgeSubtitle}>Especialista</span>
+            <span className={S.badgeTitle}>Agnaldo Tomsic</span>
+            <span className={S.badgeSubtitle}>Especialista em Alavancagem Patrimonial</span>
           </div>
         </div>
       </div>

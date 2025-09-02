@@ -22,7 +22,7 @@ const consultationSteps = [
     {
         icon: <IconMessageCircle size={32} stroke={2} />,
         title: 'Assessoria Especializada',
-        description: 'Acompanhamento na aquisição de ativos imobiliários estratégicos ou otimização de carteira de consórcios.'
+        description: 'Acompanhamento na aquisição de ativos imobiliários estratégicos ou otimização de carteira da carteira pratimonial.'
     }
 ];
 
@@ -44,8 +44,8 @@ const raizMethod = [
     },
     {
         letter: 'Z',
-        title: 'Zero Risco Excessivo',
-        description: 'Previsibilidade de pagamentos e proteção contra juros compostos'
+        title: 'Zero de Crescimento',
+        description: 'Estabilidade financeira com foco em patrimônio real e previsibilidade'
     }
 ];
 
@@ -102,10 +102,10 @@ export default function Letters() {
                             <IconBookmark size={32} stroke={2} />
                         </div>
                         <h3 className={styles.raizTitle}>
-                            Metodologia RAIZ para Consórcios
+                            Metodologia RAIZ para Alavancagem patrimonial
                         </h3>
                         <p className={styles.raizSubtitle}>
-                            Framework exclusivo para maximização de resultados patrimoniais
+                           Estratégia prática para maximizar segurança, rentabilidade e patrimônio
                         </p>
                     </div>
 

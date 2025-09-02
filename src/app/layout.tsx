@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "estratégias de investimento"
   ],
   openGraph: {
-    title: "Agnaldo Tomsic | Consultor em Alavancagem Patrimonial",
+    title: "Agnaldo Tomsic - Consultor em Alavancagem Patrimonial",
     description: "Estratégias inteligentes para construção de patrimônio através de consórcios e investimentos imobiliários. Consultoria personalizada em alavancagem patrimonial.",
     type: "website",
     locale: "pt_BR"
