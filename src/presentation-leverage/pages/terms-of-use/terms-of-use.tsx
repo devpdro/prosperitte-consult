@@ -46,7 +46,7 @@ const TermsOfUse = () => {
 
                     <h2>6. LIMITAÇÃO DE RESPONSABILIDADE</h2>
                     <p>
-                        As informações neste site são fornecidas "como estão" sem garantias de qualquer tipo. Agnaldo Tomsic não se responsabiliza por quaisquer danos diretos, indiretos, incidentais ou consequenciais decorrentes do uso deste site ou das estratégias de investimento apresentadas. O cliente assume total responsabilidade por suas decisões de investimento.
+                        As informações neste site são fornecidas &ldquo;como estão&rdquo; sem garantias de qualquer tipo. Agnaldo Tomsic não se responsabiliza por quaisquer danos diretos, indiretos, incidentais ou consequenciais decorrentes do uso deste site ou das estratégias de investimento apresentadas. O cliente assume total responsabilidade por suas decisões de investimento.
                     </p>
 
                     <h2>7. RISCOS DE INVESTIMENTO</h2>
