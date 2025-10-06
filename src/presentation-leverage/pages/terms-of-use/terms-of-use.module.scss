@@ -1,0 +1,151 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.termsOfUseContainer {
+  background: #FAFAFA;
+  min-height: 100vh;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+.termsOfUseContent {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.075rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 60px 40px;
+
+  @media (max-width: 1184px) {
+    padding: 0 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+  }
+
+  .termsTitle {
+    color: #1c1c1c;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (max-width: 1184px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 34px;
+      margin-bottom: 30px;
+    }
+  }
+
+  h2 {
+    color: #1c1c1c;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+  }
+
+  h3 {
+    color: #1c1c1c;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  p, ul, li {
+    font-family: 'Domine', sans-serif;
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  ul {
+    padding-left: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+    list-style: disc outside;
+  }
+
+  .termsFinal {
+    color: #1c1c1c;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 8px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
+  }
+
+  .termsVersao {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .privacyPolicyContent {
+    padding: 10px 2vw 14px 2vw;
+    margin: 10px 0 14px 0;
+  }
+  .privacyPolicyContent .privacyTitle {
+    font-size: 1.1rem;
+  }
+  .privacyPolicyContent h2 {
+    font-size: 1rem;
+    margin-top: 18px;
+  }
+}

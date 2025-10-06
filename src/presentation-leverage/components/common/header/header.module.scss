@@ -1,0 +1,91 @@
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background-image: url('../../../assets/images/HEADER.jpg'), linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.075rem;
+    width: 100%;
+
+    .content {
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+
+      .text {
+        color: #fff;
+        max-width: 800px;
+        animation: fadeInUp 0.8s ease-out;
+
+        .title {
+          font-size: 80px;
+          line-height: 80px;
+          font-weight: 600;
+          margin-bottom: 2.575rem;
+
+          @media (max-width: 1184px) {
+            font-size: 35px;
+            line-height: 35px;
+          }
+
+          @media (max-width: 768px) {
+            text-align: left;
+            font-size: 42px;
+            line-height: 40px;
+            margin-bottom: 0.875rem;
+          }
+
+          .highlight {
+            color: #f59e0b;
+          }
+        }
+
+        .subtitle {
+          font-family: 'Domine', sans-serif;
+          font-size: 22px;
+          line-height: 30px;
+          font-weight: 400;
+          margin-bottom: 2.075rem;
+          max-width: 600px;
+
+          @media (max-width: 1184px) {
+            font-size: 15px;
+            line-height: 23px;
+            max-width: 500px;
+            margin-bottom: 3rem;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 2rem;
+            max-width: 100%;
+            padding-right: 3.575rem;
+          }
+        }
+      }
+    }
+  }
+}
