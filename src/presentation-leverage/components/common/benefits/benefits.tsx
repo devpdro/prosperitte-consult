@@ -8,7 +8,6 @@ import {
   MdSecurity, 
   MdPayment 
 } from 'react-icons/md';
-
 import S from './benefits.module.scss';
 
 interface BenefitItem {
